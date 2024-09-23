@@ -36,7 +36,7 @@
                     <input type="password" id="senha" placeholder="--" required name="senha">
                 </div>
                 <div class="input-group">
-                    <button>Cadastrar</button>
+                    <button submit>Cadastrar</button>
                 </div>
 
             </form>
