@@ -15,7 +15,7 @@
         <div class="form-box">
             <h2>Cadastre-se!</h2>
             <p> Já é um membro? <a href="../view/login.php"> Login </a> </p>
-            <form action="#">
+            <form action="../control/UsuarioControl.php">
                 <div class="input-group">
                     <label for="nome"> Nome Completo</label>
                     <input type="text" id="nome" placeholder="--" required name="nome">
