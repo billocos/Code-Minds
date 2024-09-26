@@ -1,10 +1,10 @@
 <?php 
     include_once "../model/DTO/UsuarioDTO.php";
     include_once "../model/DAO/UsuarioDAO.php";
-
+    
     $nome = $_POST["nome"];
     $senha = $_POST["senha"];
-
+    var_dump($_POST);
    
 
     $usuarioDTO = new UsuarioDTO();

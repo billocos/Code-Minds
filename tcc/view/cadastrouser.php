@@ -15,15 +15,15 @@
         <div class="form-box">
             <h2>Cadastre-se!</h2>
             <p> Já é um membro? <a href="../view/login.php"> Login </a> </p>
-            <form action="../control/UsuarioControl.php">
+            <form action="../control/UsuarioControl.php" method="post">
                 <div class="input-group">
                     <label for="nome"> Nome Completo</label>
-                    <input type="text" id="nome" placeholder="--" required name="nome">
+                    <input type="text" name="nome" id="nome" placeholder="--" required >
                 </div>
 
                 <div class="input-group">
                     <label for="email">E-mail</label>
-                    <input type="email" id="email" placeholder="--" required name="email">
+                    <input type="email" name="email" id="email" placeholder="--" required >
                 </div>
 
                 <div class="input-group">
@@ -33,10 +33,10 @@
 
                 <div class="input-group w50">
                     <label for="senha">Senha</label>
-                    <input type="password" id="senha" placeholder="--" required name="senha">
+                    <input type="password" name="senha" id="senha" placeholder="--" required >
                 </div>
                 <div class="input-group">
-                    <button submit>Cadastrar</button>
+                    <button type="submit">cadastrar</button>
                 </div>
 
             </form>

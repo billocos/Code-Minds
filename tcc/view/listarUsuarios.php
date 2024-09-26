@@ -1,16 +1,6 @@
 <?php
 include "../control/listarUsuariocontrol.php";
 
-
-
-
-
-
-
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,16 +22,19 @@ include "../control/listarUsuariocontrol.php";
         </tr>
         <?php foreach ($todos as $t) { ?>
             <tr>
-                <td><?php echo $t["id_usuario"] ?></td>
+                <td><?php echo $t["id"] ?></td>
                 <td><?php echo $t["nome"] ?></td>
                 <td><?php echo $t["senha"] ?></td>
                 <td>
-                    <a href="../control/excluirUsuarioControl.php?id_usuario=<?php echo $t["id_usuario"] ?>">
+                    <a href="../control/excluirUsuarioControl.php?id_usuario=<?php echo $t["id"] ?>id_usuario=<?php echo $t["id"] ?>">
                         <button>excluir</button>
                     </a>
                 </td>
                 <td>
-                    <button>alterar</button>
+                    <a href="alterarUsuario.php?id_usuario=<?php echo $t["id"] ;?>">
+                        <button>alterar</button>
+                    </a>
+                    
                 </td>
 
 
