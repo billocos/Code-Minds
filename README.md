@@ -1,1 +1,2 @@
-minha ideologia
+vou me matar
+
