@@ -1,1 +1,1 @@
-quero me matar agr 
+quero me matar agr e dps w antes
