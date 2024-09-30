@@ -30,8 +30,7 @@
             <li><a href="#"><img src="./components/images/facebook.png" alt=""></a></li>
             <li><a href="#"><img src="./components/images/instagram.png" alt=""></a></li>
         </ul>
-
-        <div class="circle"></div>
+        <img src="./components/images/principallogo2.png" alt="">
     </section>      
 </body>
 </html>
