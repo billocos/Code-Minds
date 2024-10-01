@@ -13,15 +13,19 @@ class UsuarioDAO
     {
         try {
             //var_dump($usuarioDTO);
-            $sql = "INSERT INTO usuario (nome, senha) VALUES (?,?)";
+            $sql = "INSERT INTO usuario (nome, email, telefone ,senha) VALUES (? ,? ,? , ?)";
 
             $stmt = $this->pdo->prepare($sql);
 
             $nome = $usuarioDTO->getNome();
             $senha = $usuarioDTO->getSenha();
+            $email = $usuarioDTO->getEmail();
+            $tel = $usuarioDTO->getTel();
 
             $stmt->bindValue(1, $nome);
-            $stmt->bindValue(2, $senha);
+            $stmt->bindValue(2, $email);
+            $stmt->bindValue(3, $tel);
+            $stmt->bindValue(4, $senha);
 
             $retorno = $stmt->execute();
 

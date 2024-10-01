@@ -27,13 +27,17 @@ include "../control/listarUsuariocontrol.php";
         <tr>
             <th> id</th>
             <th> nome</th>
-            <th> senha</th>
+            <th> email</th>
+            <th>telefone</th>
+            <th>senha</th>
             <th colspan="2"> operaçoes</th>
         </tr>
         <?php foreach ($todos as $t) { ?>
             <tr>
                 <td><?php echo $t["id_usuario"] ?></td>
                 <td><?php echo $t["nome"] ?></td>
+                <td><?php echo $t["email"] ?></td>
+                <td><?php echo $t["telefone"] ?></td>
                 <td><?php echo $t["senha"] ?></td>
                 <td>
                     <a href="../control/excluirUsuarioControl.php?id_usuario=<?php echo $t["id_usuario"] ?>">
@@ -52,8 +56,7 @@ include "../control/listarUsuariocontrol.php";
             </tr>
 
 
-            <<<<<<< Updated upstream:view/listarUsuarios.php=======<!-- ddcdd -->
-                >>>>>>> Stashed changes:tcc/view/listarUsuarios.php
+           
 
             <?php } ?>
     </table>

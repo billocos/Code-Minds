@@ -4,15 +4,18 @@
 
     $nome = $_POST["nome"];
     $senha = $_POST["senha"];
-    //var_dump($_POST);
+    $email = $_POST["email"];
+    $tel = $_POST["telefone"];
+     var_dump($_POST);
    
 
     $usuarioDTO = new UsuarioDTO();
 
     $usuarioDTO->setNome($nome);
     $usuarioDTO->setSenha($senha);
-    
-    //var_dump($usuarioDTO);
+    $usuarioDTO->setEmail($email);
+    $usuarioDTO->setTel($tel);
+     var_dump($usuarioDTO);
 
     $usuarioDAO = new UsuarioDAO();
     $sucesso = $usuarioDAO->salvarUsuario($usuarioDTO);

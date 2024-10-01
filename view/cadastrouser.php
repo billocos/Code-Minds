@@ -28,7 +28,7 @@
 
                 <div class="input-group">
                     <label for="telefone">Telefone</label>
-                    <input type="tel" id="telefone" placeholder="" required>
+                    <input type="tel" name= "telefone"id="telefone" placeholder="" required>
                 </div>
 
                 <div class="input-group w50">
