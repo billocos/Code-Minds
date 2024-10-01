@@ -41,7 +41,10 @@ include "../control/listarUsuariocontrol.php";
                     </a>
                 </td>
                 <td>
-                    <button>alterar</button>
+                    <a href="alterarUsuario.php">
+                        <button>alterar</button>
+                    </a>
+
                 </td>
 
 
@@ -49,13 +52,10 @@ include "../control/listarUsuariocontrol.php";
             </tr>
 
 
-<<<<<<< Updated upstream:view/listarUsuarios.php
+            <<<<<<< Updated upstream:view/listarUsuarios.php=======<!-- ddcdd -->
+                >>>>>>> Stashed changes:tcc/view/listarUsuarios.php
 
-=======
-<!-- ddcdd -->
->>>>>>> Stashed changes:tcc/view/listarUsuarios.php
-
-        <?php } ?>
+            <?php } ?>
     </table>
 </body>
 

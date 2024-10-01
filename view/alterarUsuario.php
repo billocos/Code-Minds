@@ -1,8 +1,8 @@
 <?php
 require_once "../model/DAO/UsuarioDAO.php";
 require_once "../model/DTO/UsuarioDTO.php";
-$id_usuario = $_GET["id_usuario"];
-var_dump($id_usuario);
+ $id_usuario = $_GET["id_usuario"];
+ var_dump($id_usuario);
 
 $usuarioDAO = new UsuarioDAO();
 
@@ -18,7 +18,7 @@ var_dump($retorno);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<!-- so pra testar-->
+
 <body>
     <h1></h1>
     <form action="../control/alterarUsuarioControl.php" method="post">

@@ -65,7 +65,7 @@ class UsuarioDAO
     public function buscarUsuarioPorID($id_usuario)
     {
         try {
-            $sql = "SELECT*FROM USUARIO WHERE  id = {$id_usuario}";
+            $sql = "SELECT*FROM USUARIO WHERE  id_usuario = {$id_usuario}";
             $stmt = $this->pdo->prepare($sql);
 
             $stmt->execute();
@@ -78,17 +78,17 @@ class UsuarioDAO
     public function alterarUsuario(UsuarioDTO $usuarioDTO)
     {
         try {
-            $sql = "UPDATE USUARIO SET NOME=?,SENHA=? WHERE id=?";
+            $sql = "UPDATE USUARIO SET NOME=?,SENHA=? WHERE id_usuario=?";
             $stmt = $this->pdo->prepare($sql);
 
-            $id = $usuarioDTO->getId();
+            $id_usuario = $usuarioDTO->getId();
             $nome = $usuarioDTO->getNome();
             $senha = $usuarioDTO->getSenha();
 
 
             $stmt->bindValue(1, $nome);
             $stmt->bindValue(2, $senha);
-            $stmt->bindValue(3, $id);
+            $stmt->bindValue(3, $id_usuario);
 
             $retorno = $stmt->execute();
 

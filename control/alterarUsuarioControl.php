@@ -7,12 +7,12 @@ require_once "../model/DAO/UsuarioDAO.php";
 
 $nome = $_POST["nome"];
 $senha = $_POST["senha"];
-$id = $_POST["id"];
+$id_usuario = $_POST["id_usuario"];
 // var_dump($_POST)
 
 $usuarioDTO = new UsuarioDTO();
 
-$usuarioDTO->setId($id);
+$usuarioDTO->setId($id_usuario);
 $usuarioDTO->setNome($nome);
 $usuarioDTO->setSenha($senha);
 
