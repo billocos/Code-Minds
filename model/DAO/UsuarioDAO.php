@@ -58,13 +58,43 @@ class UsuarioDAO
 
             $retorno = $stmt->execute();
             return $retorno;
-            
+        } catch (PDOException $exe) {
+            echo $exe->getMessage();
+        }
+    }
+    public function buscarUsuarioPorID($id_usuario)
+    {
+        try {
+            $sql = "SELECT*FROM USUARIO WHERE  id = {$id_usuario}";
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+            $retorno = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $retorno;
+        } catch (PDOException $exe) {
+            echo $exe->getMessage();
+        }
+    }
+    public function alterarUsuario(UsuarioDTO $usuarioDTO)
+    {
+        try {
+            $sql = "UPDATE USUARIO SET NOME=?,SENHA=? WHERE id=?";
+            $stmt = $this->pdo->prepare($sql);
+
+            $id = $usuarioDTO->getId();
+            $nome = $usuarioDTO->getNome();
+            $senha = $usuarioDTO->getSenha();
+
+
+            $stmt->bindValue(1, $nome);
+            $stmt->bindValue(2, $senha);
+            $stmt->bindValue(3, $id);
+
+            $retorno = $stmt->execute();
+
+            return $retorno;
         } catch (PDOException $exe) {
             echo $exe->getMessage();
         }
     }
 }
-<<<<<<< Updated upstream:model/DAO/UsuarioDAO.php
-=======
-// oladd
->>>>>>> Stashed changes:tcc/model/DAO/UsuarioDAO.php
