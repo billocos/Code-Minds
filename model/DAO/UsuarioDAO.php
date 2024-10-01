@@ -64,3 +64,7 @@ class UsuarioDAO
         }
     }
 }
+<<<<<<< Updated upstream:model/DAO/UsuarioDAO.php
+=======
+// oladd
+>>>>>>> Stashed changes:tcc/model/DAO/UsuarioDAO.php

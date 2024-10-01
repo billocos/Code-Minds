@@ -49,7 +49,11 @@ include "../control/listarUsuariocontrol.php";
             </tr>
 
 
+<<<<<<< Updated upstream:view/listarUsuarios.php
 
+=======
+<!-- ddcdd -->
+>>>>>>> Stashed changes:tcc/view/listarUsuarios.php
 
         <?php } ?>
     </table>
