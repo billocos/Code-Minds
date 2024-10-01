@@ -22,9 +22,9 @@ var_dump($retorno);
 <body>
     <h1></h1>
     <form action="../control/alterarUsuarioControl.php" method="post">
-        <input type="hidden" name="id" value="<?php echo $retorno["id"]; ?>">
+        <input type="hidden" name="id" value="<?php echo $retorno["id_usuario"]; ?>">
         nome <input type="text" name="nome" value="<?php echo $retorno["nome"]; ?>">
-        nome <input type="text" name="senha" value="<?php echo $retorno["senha"]; ?>">
+        senha <input type="text" name="senha" value="<?php echo $retorno["senha"]; ?>">
         <input type="submit" value="atualizar">
     </form>
 </body>

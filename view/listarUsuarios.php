@@ -41,7 +41,7 @@ include "../control/listarUsuariocontrol.php";
                     </a>
                 </td>
                 <td>
-                    <a href="alterarUsuario.php">
+                    <a href="alterarUsuario.php?id_usuario=<?php echo $t["id_usuario"] ;?>">
                         <button>alterar</button>
                     </a>
 
