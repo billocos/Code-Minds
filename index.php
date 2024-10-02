@@ -1,3 +1,14 @@
+<?php 
+
+    session_start();
+    $nome = $_SESSION["nome"];
+    $id = $_SESSION["id_usuario"];
+    
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +30,9 @@
                 </ul>
             </nav>
         </header>
+        <h1>
+        <p>seja bem vindo <?php echo $nome;  ?></p>
+        </h1>
         <div class="content">
             <div class="text">
                 <h2>Pesquise <br><span>E CRIE!</span></h2>
