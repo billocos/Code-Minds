@@ -117,7 +117,6 @@
             <a href="../index.php"><li>Home</li></a>
             <a href="../view/tutoriais.php"><li>Tutoriais</li></a>
             <a href="../view/contato.php"><li>Contato</li></a>
-            <a href="../view/login.php" id="acesso"><li>Já tem uma conta?</li></a>
         </ul>
 </header>
  
