@@ -79,23 +79,28 @@ class UsuarioDAO
             echo $exe->getMessage();
         }
     }
+
+
     public function alterarUsuario(UsuarioDTO $usuarioDTO)
     {
         try {
-            $sql = "UPDATE USUARIO SET NOME=?,SENHA=? WHERE id_usuario=?";
+            $sql = "UPDATE USUARIO SET NOME=?,SENHA=?,EMAIL=?,TELEFONE=? WHERE id_usuario=?";
             $stmt = $this->pdo->prepare($sql);
 
             $id_usuario = $usuarioDTO->getId();
             $nome = $usuarioDTO->getNome();
             $senha = $usuarioDTO->getSenha();
+            $email = $usuarioDTO->getEmail();
+            $tel = $usuarioDTO->getTel();
 
-
-            $stmt->bindValue(1, $nome);
-            $stmt->bindValue(2, $senha);
-            $stmt->bindValue(3, $id_usuario);
+            $stmt->bindValue(1, $id_usuario);
+            $stmt->bindValue(2, $nome);
+            $stmt->bindValue(3, $email);
+            $stmt->bindValue(4, $tel);
+            $stmt->bindValue(5, $senha);
 
             $retorno = $stmt->execute();
-
+            var_dump($usuarioDTO);
             return $retorno;
         } catch (PDOException $exe) {
             echo $exe->getMessage();
