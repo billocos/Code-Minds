@@ -13,7 +13,7 @@
     <header>
         <div id="title">
             <h1>Code</h1>
-            <h1>Minds</h1>
+            <h1>Brain</h1>
         </div>
 
         <ul>

@@ -15,7 +15,7 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Quem somos</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="./view/contato.php">Contato</a></li>
                 </ul>
             </nav>
         </header>
@@ -30,7 +30,6 @@
             <li><a href="#"><img src="./components/images/facebook.png" alt=""></a></li>
             <li><a href="#"><img src="./components/images/instagram.png" alt=""></a></li>
         </ul>
-        <img src="./components/images/principallogo2.png" alt="">
     </section>      
 </body>
 </html>

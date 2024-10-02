@@ -70,7 +70,7 @@
             transform: translateY(-5px);
         }
         .tutorial-header {
-            background-color: rgb(162, 162, 235);
+            background-color: #403de9;
             color: white;
             padding: 20px;
             font-size: 1.5rem;
@@ -91,16 +91,18 @@
             color: white;
             text-decoration: none;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.5s ease;
         }
         .tutorial-link:hover {
-            background-color: #003d80;
+            background-color: #4c49e2;
         }
 
         h1{
             align-items: center;
             position: relative;
+            text-align: center;
         }
+
     </style>
 </head>
 <body>
@@ -124,6 +126,21 @@
 <div class="container">
     <?php
     $tutoriais = [
+        [
+            "titulo" => "Como criar um site em HTML",
+            "descricao" => "Neste tutorial, você aprenderá o básico de HTML para construir uma página web do zero.",
+            "link" => "tutorial-html.php"
+        ],
+        [
+            "titulo" => "Introdução ao CSS",
+            "descricao" => "Veja como usar CSS para estilizar seu site e deixá-lo mais atraente.",
+            "link" => "tutorial-css.php"
+        ],
+        [
+            "titulo" => "PHP para Iniciantes",
+            "descricao" => "Um guia introdutório sobre a linguagem PHP e como ela pode ser usada para criar sites dinâmicos.",
+            "link" => "tutorial-php.php"
+        ],
         [
             "titulo" => "Como criar um site em HTML",
             "descricao" => "Neste tutorial, você aprenderá o básico de HTML para construir uma página web do zero.",
