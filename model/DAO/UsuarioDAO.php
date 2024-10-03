@@ -106,4 +106,17 @@ class UsuarioDAO
             echo $exe->getMessage();
         }
     }
+    public function validarLogin($email,$senha){
+        try{
+            $sql = "SELECT * FROM USUARIO WHERE email = '{$email}' AND senha = '{$senha}'";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            $logado = $stmt->fetch(PDO::FETCH_ASSOC);
+            // var_dump($logado);
+            return $logado;
+        }catch (PDOException $exe){
+            echo $exe->getMessage();
+        }
+
+    }
 }

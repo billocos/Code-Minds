@@ -10,6 +10,9 @@
 </head>
 
 <body>
+
+        <p>seja bem vindo <?php echo $nome;  ?></p>
+        
     <div class="box">
 
         <div class="form-box">
