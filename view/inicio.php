@@ -23,5 +23,15 @@
             <a id="acesso"><li>acessar perfil</li></a>
         </ul>
     </header>
+    <?php 
+
+    session_start();
+    $nome = $_SESSION["nome"];
+    $id = $_SESSION["id_usuario"];
+    
+
+
+?>
+    <p>seja bem vindo <?php echo $nome;  ?></p>
 </body>
 </html>

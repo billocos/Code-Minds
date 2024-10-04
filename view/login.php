@@ -13,7 +13,8 @@
 		<div class="img">
 			
 		</div>
-		<div class="login-content">
+		
+		<div class="login-content" >
 			<form action="../control/loginControl.php" method="post">
 				<img src="../components/images/user.png">
 				<h2 class="title">Bem-vindo!</h2>
@@ -23,7 +24,7 @@
            		   </div>
            		   <div class="div">
            		   		<h5>E-mail</h5>
-           		   		<input type="email" class="input" required>
+           		   		<input type="email" name="email" class="input">
            		   </div>
            		</div>
            		<div class="input-div pass">
@@ -32,7 +33,7 @@
            		   </div>
            		   <div class="div">
            		    	<h5>Senha</h5>
-           		    	<input type="password" class="input" required>
+           		    	<input type="password" name="senha" class="input">
             	   </div>
             	</div>
             	<a href="#">Esqueceu sua senha?</a>
