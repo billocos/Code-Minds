@@ -11,6 +11,7 @@ section{
     width: 100%;
     min-height: 100vh;
     padding: 100px;
+    /* font-weight: 600; */
     display: flex;
     justify-content: space-between;
     align-items: center;

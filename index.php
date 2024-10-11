@@ -1,12 +1,4 @@
-<?php 
 
-    session_start();
-    $nome = $_SESSION["nome"];
-    $id = $_SESSION["id_usuario"];
-    
-
-
-?>
 
 
 <!DOCTYPE html>
@@ -16,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
-    <title>Document</title>
+    <title>Code Brain</title>
 </head>
 <body>
     <section>
@@ -31,7 +23,7 @@
             </nav>
         </header>
         <h1>
-        <p>seja bem vindo <?php echo $nome;  ?></p>
+        
         </h1>
         <div class="content">
             <div class="text">

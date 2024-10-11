@@ -2,15 +2,6 @@
 include "../control/listarUsuariocontrol.php";
 
 
-
-
-
-
-
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,9 +1,10 @@
 body{
-    background-color: rgb(0, 0, 0);
+    background-color: #222;
     color: white;
     font-family: poppinsregular;
     max-width: 1200px;
     margin: 0 auto;
+    font-weight: 600;
     padding: 15px;
 }
 

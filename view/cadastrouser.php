@@ -11,8 +11,6 @@
 
 <body>
 
-        <p>seja bem vindo <?php echo $nome;  ?></p>
-        
     <div class="box">
 
         <div class="form-box">
@@ -21,25 +19,25 @@
             <form action="../control/UsuarioControl.php" method="POST">
                 <div class="input-group">
                     <label for="nome"> Nome Completo</label>
-                    <input type="text" name="nome" id="nome" placeholder="" required >
+                    <input type="text" name="nome" id="nome" placeholder="" required>
                 </div>
 
                 <div class="input-group">
                     <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email" placeholder="" required >
+                    <input type="email" name="email" id="email" placeholder="" required>
                 </div>
 
                 <div class="input-group">
                     <label for="telefone">Telefone</label>
-                    <input type="tel" name= "telefone"id="telefone" placeholder="" required>
+                    <input type="tel" name="telefone" id="telefone" placeholder="" required>
                 </div>
 
                 <div class="input-group w50">
                     <label for="senha">Senha</label>
-                    <input type="password"  name="senha" id="senha" placeholder="" required >
+                    <input type="password" name="senha" id="senha" placeholder="" required>
                 </div>
                 <div class="input-group">
-                     <button type="submit" value="Cadastrar" >Cadastrar</button>
+                    <button type="submit" value="Cadastrar">Cadastrar</button>
                 </div>
 
             </form>

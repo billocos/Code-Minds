@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/fonts.css">
     <link rel="stylesheet" href="../styles/media.css">
-    <title>Lista de Tutoriais</title>
+    <title>Tutoriais</title>
     <style>
         body{
-            background-color: rgb(0, 0, 0);
+            background-color: #222;
             color: white;
             font-family: poppinsregular;
             max-width: 1200px;
@@ -57,6 +57,7 @@
             width: 90%;
             max-width: 1200px;
             margin: 40px auto;
+            align-items: center;
         }
         .tutorial-card {
             background-color: white;
@@ -102,6 +103,38 @@
             position: relative;
             text-align: center;
         }
+
+        
+        .btn{
+            display: block;
+            width: 100%;
+            height: 50px;
+            border-radius: 25px;
+            outline: none;
+            border: none;
+            background-image: linear-gradient(to right, #0051ff, #7598e4, #c2cbf1);
+            background-size: 200%;
+            font-size: 1.2rem;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            margin: 1rem 0;
+            cursor: pointer;
+            transition: .5s;
+        }
+        .btn:hover{
+            background-position: right;
+        }
+
+        .bloquin{
+            size: 50%;
+            width: 50%;
+            align-items: center;
+            text-align: center;
+            
+        }
+
+
 
     </style>
 </head>
@@ -171,6 +204,8 @@
     }
     ?>
 </div>
+<form action="../view/alltutoriais.php"><input type="submit" class="btn" value="Ver todos"></form>
+
 </body>
 </html>
 
