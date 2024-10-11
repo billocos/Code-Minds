@@ -7,8 +7,9 @@ body{
     font-family: 'Poppins', sans-serif;
     max-width: 1200px;
     margin: 0 auto;
+    font-weight: 600;
     padding: 15px;
-    background-image: url(/components/images/Fale\ conosco.png);
+    background-image: url(../components/images/Faleconosco.png);
     background-size: 100%;
 }
 

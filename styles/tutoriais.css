@@ -1,16 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
-
 body{
+    background-color: #222;
     color: white;
     font-family: poppinsregular;
-    font-size: large;
     font-weight: 600;
     max-width: 1200px;
     margin: 0 auto;
     padding: 15px;
-    background-image: url("../components/images/fundoprin.png");
-    background-size: 100%;
-    background-position: absolute;
 }
 
 header{
@@ -52,16 +47,9 @@ a:hover{
     color: rgb(98, 11, 170);
 }
 
-h2{
+h1{
     font-weight: 200;
     color: rgb(162, 162, 235);
-    font-size: xx-large;
-}
-
-h1{
-    color: rgb(255, 255, 255);
-    text-align: center;
-    
 }
 
 .bloco{
