@@ -18,10 +18,10 @@ class UsuarioDAO
             $stmt = $this->pdo->prepare($sql);
 
             $nome = $usuarioDTO->getNome();
-            $senha = $usuarioDTO->getSenha();
             $email = $usuarioDTO->getEmail();
             $tel = $usuarioDTO->getTel();
-
+            $senha = $usuarioDTO->getSenha();
+            
             $stmt->bindValue(1, $nome);
             $stmt->bindValue(2, $email);
             $stmt->bindValue(3, $tel);
@@ -84,7 +84,7 @@ class UsuarioDAO
     public function alterarUsuario(UsuarioDTO $usuarioDTO)
     {
         try {
-            $sql = "UPDATE USUARIO SET NOME=?,SENHA=?,EMAIL=?,TELEFONE=? WHERE id_usuario=?";
+            $sql = "UPDATE USUARIO SET nome=?,senha=?,email=?,telefone=? WHERE id_usuario=?";
             $stmt = $this->pdo->prepare($sql);
 
             $id_usuario = $usuarioDTO->getId();
