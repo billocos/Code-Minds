@@ -25,7 +25,7 @@
     </header>
 
     <h1>Painel do Administrador - Bem-vindo!</h1>
-<div class="bloco">i i
+<div class="bloco">
     i i 
     i 
     i 

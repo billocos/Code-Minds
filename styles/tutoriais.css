@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
 body{
     background-color: #222;
     color: white;
@@ -6,6 +8,9 @@ body{
     max-width: 1200px;
     margin: 0 auto;
     padding: 15px;
+    background-image: url(../components/images/fundoprin.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 header{
@@ -49,7 +54,7 @@ a:hover{
 
 h1{
     font-weight: 200;
-    color: rgb(162, 162, 235);
+    color: rgb(255, 255, 255);
 }
 
 .bloco{
@@ -59,4 +64,68 @@ h1{
     color: #fff;
     border-radius: 10px;
     padding: 30px 40px
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.hpre {
+    font-size: 03em;
+    color: #2c16f0;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.hpri{
+    text-align: center;
+    align-items: center;
+    color: #3498db;
+    font-size: xx-large;
+}
+
+p {
+    font-size: 1.2em;
+    color: #a3aaaa;
+    margin-bottom: 40px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.button {
+    padding: 15px 40px;
+    margin: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #2980b9;
+    transform: translateY(-5px);
+}
+
+.footer {
+    margin-top: 50px;
+    font-size: 0.9em;
+    color: #95a5a6;
+}
+
+.footer a {
+    color: #3498db;
+    text-decoration: none;
 }

@@ -2,8 +2,7 @@
 include_once "Conexao.php";
 include_once "../model/DTO/UsuarioDTO.php";
 
-class UsuarioDAO
-{
+class UsuarioDAO{
     public $pdo = null;
     public function __construct()
     {
@@ -18,9 +17,9 @@ class UsuarioDAO
             $stmt = $this->pdo->prepare($sql);
 
             $nome = $usuarioDTO->getNome();
-            $senha = $usuarioDTO->getSenha();
             $email = $usuarioDTO->getEmail();
             $tel = $usuarioDTO->getTel();
+            $senha = $usuarioDTO->getSenha();
 
             $stmt->bindValue(1, $nome);
             $stmt->bindValue(2, $email);
@@ -85,7 +84,7 @@ class UsuarioDAO
 
     {
         try {
-            $sql = "UPDATE usuario SET nome=?,senha=?,email=?,telefone=? WHERE id_usuario=?";
+            $sql = "UPDATE USUARIO SET nome=?,senha=?,email=?,telefone=? WHERE id_usuario=?";
             $stmt = $this->pdo->prepare($sql);
 
             $id_usuario = $usuarioDTO->getId();
@@ -118,6 +117,7 @@ class UsuarioDAO
         }catch (PDOException $exe){
             echo $exe->getMessage();
         }
+    
 
     }
 }

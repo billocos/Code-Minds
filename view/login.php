@@ -37,6 +37,7 @@
             	   </div>
             	</div>
             	<a href="#">Esqueceu sua senha?</a>
+				<a href="../view/cadastrouser.php">não possui conta?</a>
             	<input type="submit" class="btn" value="Login">
             </form>
         </div>
