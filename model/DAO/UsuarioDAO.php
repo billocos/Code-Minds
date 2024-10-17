@@ -2,8 +2,7 @@
 include_once "Conexao.php";
 include_once "../model/DTO/UsuarioDTO.php";
 
-class UsuarioDAO
-{
+class UsuarioDAO{
     public $pdo = null;
     public function __construct()
     {
@@ -21,7 +20,7 @@ class UsuarioDAO
             $email = $usuarioDTO->getEmail();
             $tel = $usuarioDTO->getTel();
             $senha = $usuarioDTO->getSenha();
-            
+
             $stmt->bindValue(1, $nome);
             $stmt->bindValue(2, $email);
             $stmt->bindValue(3, $tel);
@@ -117,6 +116,7 @@ class UsuarioDAO
         }catch (PDOException $exe){
             echo $exe->getMessage();
         }
+    
 
     }
 }
