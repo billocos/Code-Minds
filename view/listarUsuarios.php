@@ -15,7 +15,6 @@ include "../control/listarUsuariocontrol.php";
 <body>
     <h1 class="prin">Controle de usuários</h1>
     <div class="bloco">
-        
     <table>
         <thead>
             <tr>
@@ -36,13 +35,13 @@ include "../control/listarUsuariocontrol.php";
                 <td><?php echo $t["telefone"] ?></td>
                 <td><?php echo $t["senha"] ?></td>
                 <td>
-                    <a style="background-color: red;" href="../control/excluirUsuarioControl.php?id_usuario=<?php echo $t["id_usuario"] ?>">
-                        <button>Excluir</button>
+                    <a class="btn.excluir" href="../control/excluirUsuarioControl.php?id_usuario=<?php echo $t["id_usuario"] ?>">
+                        <button style="background-color: red;"  class="btn">Excluir</button>
                     </a>
                 </td>
                 <td>
-                    <a style="background-color: orange;" href="alterarUsuario.php?id_usuario=<?php echo $t["id_usuario"] ;?>">
-                        <button>Alterar</button>
+                    <a class="btn.alterar" href="alterarUsuario.php?id_usuario=<?php echo $t["id_usuario"] ;?>">
+                        <button style="background-color: yellow;" class="btn">Alterar</button>
                     </a>
 
                 </td>

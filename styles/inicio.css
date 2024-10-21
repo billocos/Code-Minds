@@ -6,6 +6,8 @@ body{
     margin: 0 auto;
     font-weight: 600;
     padding: 15px;
+    background-image: url(../components/images/fundoprin.png);
+    background-size: 100%;
 }
 
 header{
@@ -39,6 +41,7 @@ a:hover{
 #acesso{
     border: 2px solid rgb(16, 6, 160);
     padding: 10px;
+    cursor: pointer;
     border-radius: 15px;
 }
 
@@ -47,7 +50,75 @@ a:hover{
     color: rgb(98, 11, 170);
 }
 
-h1{
+.prin{
     font-weight: 200;
     color: rgb(255, 255, 255);
+}
+
+.full-screen-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 90px 20px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.welcome-message {
+    max-width: 800px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+.princ {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.button {
+    background-color: #6757fa;
+    color: #333;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px;
+    width: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: static;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(119, 121, 255, 0.4);
+}
+
+.button:hover {
+    background-color: #7d6ff7;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.432);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .button {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+span{
+    color: #b1b6fc;
 }

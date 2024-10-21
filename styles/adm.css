@@ -72,3 +72,82 @@ h1{
     border-radius: 10px;
     padding: 30px 40px
 }
+
+.admin-container {
+    max-width: 900px;
+    padding: 50px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.menu-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.option {
+    background-color: #9189ff;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    width: 45%;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.option:hover {
+    transform: scale(1.05);
+}
+
+.xebiu {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    align-items: center;
+}
+
+button {
+    background-color: #3246fc;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #b6bbff;
+}
+
+@media (max-width: 768px) {
+    .menu-options {
+        flex-direction: column;
+    }
+
+    .option {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

@@ -153,7 +153,7 @@ h1{
         </div>
 
         <ul>
-            <a id="acesso"><li>Voltar</li></a>
+            <a href="./alltutoriais.php" id="acesso"><li>Voltar</li></a>
         </ul>
     </header>
     <div class="bloco">

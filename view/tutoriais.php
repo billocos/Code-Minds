@@ -13,6 +13,7 @@
             font-family: poppinsregular;
             max-width: 1200px;
             margin: 0 auto;
+            font-weight: 600;
             padding: 15px;
         }
         header{
@@ -150,7 +151,7 @@
             <a href="../index.php"><li>Home</li></a>
             <a href="../view/tutoriais.php"><li>Tutoriais</li></a>
             <a href="../view/contato.php"><li>Contato</li></a>
-            <a href="../view/login.php" id="acesso"><li>Já tem uma conta?</li></a>
+            <a href="../view/login.php" id="acesso"><li>Acessar perfil</li></a>
         </ul>
 </header>
  

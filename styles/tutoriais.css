@@ -32,13 +32,13 @@ li{
 }
 
 a{
-    color: rgb(16, 6, 160);
+    color: rgb(110, 103, 212);
     border-color: rgb(162, 162, 235);
 }
 
 a:hover{
-    color: rgb(16, 6, 160);
-    transition: 0.3s all;
+    color: rgb(92, 86, 179);
+    transition: 2.0s all;
 }
 
 #acesso{
@@ -75,7 +75,7 @@ h1{
 
 .hpre {
     font-size: 03em;
-    color: #2c16f0;
+    color: #6f5ffa;
     margin-bottom: 20px;
     font-weight: 600;
 }

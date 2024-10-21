@@ -9,11 +9,10 @@
     <title>Inicio</title>
 </head>
 <body>
-    <style></style>
     <header>
         <div id="title">
-            <h1>Code</h1>
-            <h1>Brain</h1>
+            <h1 class="prin">Code</h1>
+            <h1 class="prin">Brain</h1>
         </div>
 
         <ul>
@@ -28,10 +27,15 @@
     session_start();
     $nome = $_SESSION["nome"];
     $id = $_SESSION["id_usuario"];
-    
-
-
 ?>
-    <p>seja bem vindo <?php echo $nome;  ?></p>
+<div class="full-screen-container">
+        <div class="welcome-message">
+            <h1 class="princ">Bem-vindo, <span><?php echo $nome;  ?></span>!</h1>
+            <p>Prepare-se para explorar e expandir seus conhecimentos com todos esses conteúdos diversificados.</p>
+            <form action="../view/tutoriais.php"><input type="submit" class="button" value="Começar"></form>
+
+        </div>
+    </div>
+    
 </body>
 </html>
