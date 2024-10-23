@@ -19,7 +19,6 @@
             <a href="../view/tutoriais.php"><li>Tutoriais</li></a>
             <a href="../view/sobre.php"><li>Sobre</li></a>
             <a href="../view/contato.php"><li>Contato</li></a>
-            <a id="acesso"><li>acessar perfil</li></a>
         </ul>
     </header>
     <?php 

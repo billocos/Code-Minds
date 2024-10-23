@@ -36,7 +36,7 @@ include "../control/listarUsuariocontrol.php";
                 <td><?php echo $t["senha"] ?></td>
                 <td>
                     <a class="btn.excluir" href="../control/excluirUsuarioControl.php?id_usuario=<?php echo $t["id_usuario"] ?>">
-                        <button style="background-color: red;"  class="btn">Excluir</button>
+                        <button style="background-color: red;"  class="btn">Desativar</button>
                     </a>
                 </td>
                 <td>

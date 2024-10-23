@@ -148,10 +148,7 @@
         </div>
 
         <ul>
-            <a href="../index.php"><li>Home</li></a>
-            <a href="../view/tutoriais.php"><li>Tutoriais</li></a>
-            <a href="../view/contato.php"><li>Contato</li></a>
-            <a href="../view/login.php" id="acesso"><li>Acessar perfil</li></a>
+            <a href="./inicio.php" id="acesso"><li>Home</li></a>
         </ul>
 </header>
  
