@@ -12,14 +12,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #0c0ce94d;
+    background: #222;
 }
 
 .container {
     width: 80%;
-    height: 80vh;
+    height: 87vh;
     display: flex;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+    border: #222;
+    box-shadow: 5px 5px 10px #222;
 }
 
 .form-image {
@@ -27,7 +28,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fde3a7d7;
+    background-color: #222;
     padding: 1rem;
 }
 

@@ -80,6 +80,7 @@ class UsuarioDAO{
 
 
     public function alterarUsuario(UsuarioDTO $usuarioDTO)
+
     {
         try {
             $sql = "UPDATE USUARIO SET nome=?,senha=?,email=?,telefone=? WHERE id_usuario=?";
@@ -91,11 +92,11 @@ class UsuarioDAO{
             $email = $usuarioDTO->getEmail();
             $tel = $usuarioDTO->getTel();
 
-            $stmt->bindValue(1, $id_usuario);
-            $stmt->bindValue(2, $nome);
-            $stmt->bindValue(3, $email);
+            $stmt->bindValue(5, $id_usuario);
+            $stmt->bindValue(1, $nome);
             $stmt->bindValue(4, $tel);
-            $stmt->bindValue(5, $senha);
+            $stmt->bindValue(2, $senha);
+            $stmt->bindValue(3, $email);
 
             $retorno = $stmt->execute();
             var_dump($usuarioDTO);

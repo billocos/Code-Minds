@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
-    <title>Document</title>
+    <title>Code Brain</title>
 </head>
 <body>
     <section>
@@ -22,11 +22,13 @@
         </header>
         <h1>
         
+        
         </h1>
         <div class="content">
             <div class="text">
                 <h2>Pesquise <br><span>E CRIE!</span></h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores autem eaque voluptas accusamus, illum, quisquam distinctio adipisci iusto earum corrupti soluta tenetur voluptatibus aperiam saepe vitae architecto eligendi repellendus delectus?</p>
+                <p>Nosso objetivo é capacitar a geração de desenvolvedores com ferramentas práticas e soluções criativas, ajudando você a expandir suas habilidades e avançar na sua carreira.
+O Code Brain é o parceiro ideal na sua jornada de aprendizado.</p>
                 <a href="./view/cadastrouser.php">COMECE A EXPLORAR!</a>
             </div>
         </div>

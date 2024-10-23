@@ -1,9 +1,10 @@
 body{
-    background-color: rgb(0, 0, 0);
+    background-color: #222;
     color: white;
     font-family: poppinsregular;
     max-width: 1200px;
     margin: 0 auto;
+    font-weight: 600;
     padding: 15px;
 }
 
@@ -48,5 +49,5 @@ a:hover{
 
 h1{
     font-weight: 200;
-    color: rgb(162, 162, 235);
+    color: rgb(255, 255, 255);
 }
