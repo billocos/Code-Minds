@@ -36,6 +36,7 @@
                     <label for="senha">Senha</label>
                     <input type="password" name="senha" id="senha" placeholder="" required>
                 </div>
+                    <input type="hidden" name="tipo" value="aluno">
                 <div class="input-group">
                     <button type="submit" value="Cadastrar">Cadastrar</button>
                 </div>

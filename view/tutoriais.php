@@ -1,3 +1,8 @@
+<?php   
+    include("../control/listarTutorialControl.php");       
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -189,21 +194,21 @@
         ]
     ];
 
-    foreach ($tutoriais as $tutorial) {
+    foreach ($todos as $tutorial) {
         echo "
         <div class='tutorial-card'>
             <div class='tutorial-header'>{$tutorial['titulo']}</div>
             <div class='tutorial-body'>
                 <p>{$tutorial['descricao']}</p>
-                <a class='tutorial-link' href='{$tutorial['link']}'>Ver Tutorial</a>
+                <a class='tutorial-link' href='tutorialCompleto.php?id={$tutorial['id_tutorial']}'>Ver Tutorial</a>
             </div>
         </div>
         ";
     }
     ?>
 </div>
-<form action="../view/alltutoriais.php"><input type="submit" class="btn" value="Ver todos"></form>
-<!-- mmm -->
+
+
 </body>
 </html>
 

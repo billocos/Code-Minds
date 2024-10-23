@@ -41,7 +41,12 @@ $retorno = $usuarioDAO->buscarUsuarioPorID($id_usuario);
             <div class="input-group">
                 <label for="senha">Senha</label>
                 <input type="password" name="senha" value="<?php echo $retorno["senha"]; ?>">
-            </div>
+            <select name="tipo" id="" value = "<?php echo $retorno["tipo"]; ?>">
+            <option value="aluno">aluno</option>
+            <option value="professor">professor</option>
+            <option value="administrador">administrador</option>
+        </select>
+        </div>
 
             <button input type="submit">Salvar Alterações</button>
         </form>

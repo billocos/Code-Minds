@@ -16,9 +16,11 @@
     $usuarioDAO = new UsuarioDAO();
     $logado = $usuarioDAO->validarLogin($email,$senha);
     if($logado){
-        header("Location:../view/inicio.php");
+        
         $_SESSION["id_usuario"] = $logado["id_usuario"];
         $_SESSION["nome"] = $logado["nome"];
+        $_SESSION["tipo"] = $logado["tipo"];
+        header("Location:../view/inicio.php");
     }else{
         header("Location:../view/login.php?msg=email ou senha invalidos");
     }
