@@ -2,14 +2,14 @@
     include_once "../model/DTO/TutorialDTO.php";
     include_once "../model/DAO/TutorialDAO.php";
 
-    $nome = $_POST["nome"];
-    $tutorial = $_POST["tutorial"];
+    $titulo = $_POST["nome"];
+    $conteudo = $_POST["tutorial"];
 
     $tutorialDTO =  new TutorialDTO();
     $tutorialDAO =  new TutorialDAO();
 
-    $tutorialDTO->setNome($nome);
-    $tutorialDTO->setTutorial($tutorial);
+    $tutorialDTO->setTitulo($titulo);
+    $tutorialDTO->setConteudo($conteudo);
 
     $sucesso = $tutorialDAO->salvarTutorial($tutorialDTO);
 

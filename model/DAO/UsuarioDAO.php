@@ -36,8 +36,7 @@ class UsuarioDAO{
             echo $exe->getMessage();
         }
     }
-    public function listarUsuarios()
-    {
+    public function listarUsuarios(){
         try {
             $sql = "SELECT * FROM usuario";
             $stmt = $this->pdo->prepare($sql);

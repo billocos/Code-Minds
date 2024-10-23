@@ -1,15 +1,15 @@
 <?php 
 
     class TutorialDTO{
-        private $nome;
+        private $titulo;
         private $id;
-        private $tutorial;
+        private $conteudo;
 
-        public function setNome($nome){
-            $this->nome = $nome;
+        public function setTitulo($titulo){
+            $this->titulo = $titulo;
         }
-        public function getNome(){
-            return $this->nome;
+        public function getTitulo(){
+            return $this->titulo;
         }
         public function setId($id){
             $this->id = $id;
@@ -18,11 +18,11 @@
             return $this->id ;
         }
 
-        public function setTutorial($tutorial){
-            $this->tutorial = $tutorial;
+        public function setConteudo($conteudo){
+            $this->conteudo = $conteudo;
         }
-        public function getTutorial(){
-            return $this->tutorial ;
+        public function getConteudo(){
+            return $this->conteudo ;
         
         }
 
