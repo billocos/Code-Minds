@@ -12,7 +12,7 @@ class UsuarioDAO{
     {
         try {
             //var_dump($usuarioDTO);
-            $sql = "INSERT INTO usuario (nome, email, telefone ,senha) VALUES (? ,? ,? , ?)";
+            $sql = "INSERT INTO usuario (nome, email, telefone ,senha ,tipo) VALUES (? ,? ,? , ? ,?)";
 
             $stmt = $this->pdo->prepare($sql);
 
@@ -20,11 +20,13 @@ class UsuarioDAO{
             $email = $usuarioDTO->getEmail();
             $tel = $usuarioDTO->getTel();
             $senha = $usuarioDTO->getSenha();
+            $tipo = $usuarioDTO->getTipo();
 
             $stmt->bindValue(1, $nome);
             $stmt->bindValue(2, $email);
             $stmt->bindValue(3, $tel);
             $stmt->bindValue(4, $senha);
+            $stmt->bindValue(5, $tipo);
 
             $retorno = $stmt->execute();
 
@@ -83,7 +85,7 @@ class UsuarioDAO{
 
     {
         try {
-            $sql = "UPDATE USUARIO SET nome=?,senha=?,email=?,telefone=? WHERE id_usuario=?";
+            $sql = "UPDATE USUARIO SET nome=?,senha=?,email=?,telefone=?,tipo=? WHERE id_usuario=?";
             $stmt = $this->pdo->prepare($sql);
 
             $id_usuario = $usuarioDTO->getId();
@@ -91,12 +93,18 @@ class UsuarioDAO{
             $senha = $usuarioDTO->getSenha();
             $email = $usuarioDTO->getEmail();
             $tel = $usuarioDTO->getTel();
+            $tipo = $usuarioDTO->getTipo(); 
 
-            $stmt->bindValue(5, $id_usuario);
+           
             $stmt->bindValue(1, $nome);
-            $stmt->bindValue(4, $tel);
             $stmt->bindValue(2, $senha);
             $stmt->bindValue(3, $email);
+            $stmt->bindValue(4, $tel);
+            $stmt->bindValue(5, $tipo);
+            $stmt->bindValue(6, $id_usuario);
+            
+            
+            
 
             $retorno = $stmt->execute();
             var_dump($usuarioDTO);

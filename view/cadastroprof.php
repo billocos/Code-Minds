@@ -15,17 +15,17 @@
             <img src="../components/images/principallogo2.png" alt="">
         </div>
         <div class="form">
-            <form action="#">
+            <form action="../control/UsuarioControl.php" method="POST">
                 <div class="form-header">
                     <div class="title">
                         <h1>Cadastrar Professor</h1>
                     </div>
                 </div>
-
+                    
                 <div class="input-group">
                     <div class="input-box">
                         <label for="firstname">Primeiro Nome</label>
-                        <input id="firstname" type="text" name="firstname" placeholder="" required>
+                        <input id="firstname" type="text" name="nome" placeholder="" required>
                     </div>
 
                     <div class="input-box">
@@ -39,20 +39,20 @@
 
                     <div class="input-box">
                         <label for="number">Celular</label>
-                        <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
+                        <input id="number"  name="telefone" placeholder="(xx) xxxx-xxxx" required>
                     </div>
 
                     <div class="input-box">
                         <label for="password">Senha</label>
-                        <input id="password" type="password" name="password" placeholder="" required>
+                        <input id="password" type="password" name="senha" placeholder="" required>
                     </div>
-
+                        <input type="hidden" name="tipo" value="professor">
 
                     <div class="input-box">
                         <label for="confirmPassword">Confirme sua Senha</label>
                         <input id="confirmPassword" type="password" name="confirmPassword" placeholder="" required>
                     </div>
-
+                
                 </div>
 
                 <div class="gender-inputs">
@@ -84,7 +84,7 @@
                 </div>
 
                 <div class="continue-button">
-                    <button><a href="#">Continuar</a> </button>
+                    <button type="submit">Continuar</button>
                 </div>
             </form>
         </div>

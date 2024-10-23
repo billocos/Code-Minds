@@ -209,13 +209,7 @@
     }
     ?>
 </div>
-<!-- <?php foreach ($todos as $tutorial): ?>
-            <li>
-                <strong><?php echo htmlspecialchars($tutorial['titulo']); ?></strong>
-                <?php echo ($tutorial['id_tutorial']); ?>
-                <a href="tutoriais.php?id=<?php echo $tutorial['id_tutorial']; ?>">Ver tutorial completo</a>
-            </li>
-        <?php endforeach; ?> -->
+
 
 </body>
 </html>

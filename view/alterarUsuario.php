@@ -27,6 +27,11 @@ var_dump($retorno);
         email <input type="text" name="email" value="<?php echo $retorno["email"]; ?>">
         telefone <input type="tel" name="tel" value="<?php echo $retorno["telefone"]; ?>">
         senha <input type="text" name="senha" value="<?php echo $retorno["senha"]; ?>">
+        <select name="tipo" id="" value = "<?php echo $retorno["tipo"]; ?>">
+            <option value="aluno">aluno</option>
+            <option value="professor">professor</option>
+            <option value="administrador">administrador</option>
+        </select>
         <input type="submit" value="atualizar">
     </form>
 </body>

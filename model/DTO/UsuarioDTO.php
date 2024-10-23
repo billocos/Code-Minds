@@ -6,6 +6,7 @@
         private $id;
         private $email;
         private $tel;
+        private $tipo;
 
         public function setNome($nome){
             $this->nome = $nome;
@@ -36,6 +37,12 @@
         }
         public function getTel(){
             return $this->tel;
+        }
+        public function setTipo($tipo){
+            $this->tipo = $tipo;
+        }
+        public function getTipo(){
+            return $this->tipo;
         }
     }
 

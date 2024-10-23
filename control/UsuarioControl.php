@@ -6,7 +6,8 @@
     $senha = $_POST["senha"];
     $email = $_POST["email"];
     $tel = $_POST["telefone"];
-     var_dump($_POST);
+    $tipo = $_POST["tipo"];
+    //  var_dump($_POST);
    
 
     $usuarioDTO = new UsuarioDTO();
@@ -15,17 +16,18 @@
     $usuarioDTO->setSenha($senha);
     $usuarioDTO->setEmail($email);
     $usuarioDTO->setTel($tel);
+    $usuarioDTO->setTipo($tipo);
      var_dump($usuarioDTO);
 
     $usuarioDAO = new UsuarioDAO();
     $sucesso = $usuarioDAO->salvarUsuario($usuarioDTO);
 
-    var_dump($sucesso);
+    // var_dump($sucesso);
 
-    if($sucesso){
-        $msg = "suxesso";
-    }else{
-        $msg = "deu erro";
-    }
-    echo "{$msg}";
+    // if($sucesso){
+    //     $msg = "suxesso";
+    // }else{
+    //     $msg = "deu erro";
+    // }
+    // echo "{$msg}";
 ?>

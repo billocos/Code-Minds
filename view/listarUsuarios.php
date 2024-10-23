@@ -24,6 +24,7 @@ include "../control/listarUsuariocontrol.php";
                 <th>Email</th>
                 <th>Telefone</th>
                 <th>Senha</th>
+                <th>Tipo</th>
                 <th colspan="2"> </th>
             </tr>
         </thead>
@@ -35,6 +36,7 @@ include "../control/listarUsuariocontrol.php";
                 <td><?php echo $t["email"] ?></td>
                 <td><?php echo $t["telefone"] ?></td>
                 <td><?php echo $t["senha"] ?></td>
+                <td><?php echo $t["tipo"] ?></td>
                 <td>
                     <a style="background-color: red;" href="../control/excluirUsuarioControl.php?id_usuario=<?php echo $t["id_usuario"] ?>">
                         <button>Excluir</button>
