@@ -1,10 +1,18 @@
-<?php   
-    include("../control/listarTutorialControl.php");       
+<?php
+include("../control/listarTutorialControl.php");
+
+session_start();
+$nome = $_SESSION["nome"];
+$id = $_SESSION["id_usuario"];
+$tipo = $_SESSION["tipo"];
+//var_dump($todos);
+
 ?>
 
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +20,7 @@
     <link rel="stylesheet" href="../styles/media.css">
     <title>Tutoriais</title>
     <style>
-        body{
+        body {
             background-color: #222;
             color: white;
             font-family: poppinsregular;
@@ -21,50 +29,53 @@
             font-weight: 600;
             padding: 15px;
         }
-        header{
+
+        header {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            }
+        }
 
-        #title{
+        #title {
             flex-direction: column;
             line-height: 10px;
         }
 
-        li{
+        li {
             display: inline-block;
             margin: 18px;
             color: rgb(162, 162, 235);
         }
 
-        a{
+        a {
             color: rgb(16, 6, 160);
             border-color: rgb(162, 162, 235);
         }
 
-        a:hover{
+        a:hover {
             color: rgb(16, 6, 160);
             transition: 0.3s all;
         }
 
-        #acesso{
+        #acesso {
             border: 2px solid rgb(16, 6, 160);
             padding: 10px;
             border-radius: 15px;
         }
 
-        #acesso:hover{
+        #acesso:hover {
             background-color: rgb(16, 6, 160);
             color: rgb(98, 11, 170);
         }
+
         .container {
             width: 90%;
             max-width: 1200px;
             margin: 40px auto;
             align-items: center;
         }
+
         .tutorial-card {
             background-color: white;
             border-radius: 8px;
@@ -73,23 +84,28 @@
             overflow: hidden;
             transition: transform 0.3s ease;
         }
+
         .tutorial-card:hover {
             transform: translateY(-5px);
         }
+
         .tutorial-header {
             background-color: #403de9;
             color: white;
             padding: 20px;
             font-size: 1.5rem;
         }
+
         .tutorial-body {
             padding: 20px;
         }
+
         .tutorial-body p {
             margin: 0 0 10px;
             font-size: 1rem;
             color: #555;
         }
+
         .tutorial-link {
             display: inline-block;
             margin-top: 15px;
@@ -100,18 +116,19 @@
             border-radius: 5px;
             transition: background-color 0.5s ease;
         }
+
         .tutorial-link:hover {
             background-color: #4c49e2;
         }
 
-        h1{
+        h1 {
             align-items: center;
             position: relative;
             text-align: center;
         }
 
-        
-        .btn{
+
+        .btn {
             display: block;
             width: 100%;
             height: 50px;
@@ -128,87 +145,57 @@
             cursor: pointer;
             transition: .5s;
         }
-        .btn:hover{
+
+        .btn:hover {
             background-position: right;
         }
 
-        .bloquin{
+        .bloquin {
             size: 50%;
             width: 50%;
             align-items: center;
             text-align: center;
-            
+
         }
-
-
-
     </style>
 </head>
+
 <body>
 
-<header>
-<div id="title">
+    <header>
+        <div id="title">
             <h1>Code</h1>
             <h1>Brain</h1>
         </div>
 
         <ul>
-            <a href="./inicio.php" id="acesso"><li>Home</li></a>
+            <a href="./inicio.php" id="acesso">
+                <li>Home</li>
+            </a>
         </ul>
-</header>
- 
-  <h1>Tutoriais mais acessados!</h1>
+    </header>
 
-<div class="container">
-    <?php
-    $tutoriais = [
-        [
-            "titulo" => "Como criar um site em HTML",
-            "descricao" => "Neste tutorial, você aprenderá o básico de HTML para construir uma página web do zero.",
-            "link" => "tutorial-html.php"
-        ],
-        [
-            "titulo" => "Introdução ao CSS",
-            "descricao" => "Veja como usar CSS para estilizar seu site e deixá-lo mais atraente.",
-            "link" => "tutorial-css.php"
-        ],
-        [
-            "titulo" => "PHP para Iniciantes",
-            "descricao" => "Um guia introdutório sobre a linguagem PHP e como ela pode ser usada para criar sites dinâmicos.",
-            "link" => "tutorial-php.php"
-        ],
-        [
-            "titulo" => "Como criar um site em HTML",
-            "descricao" => "Neste tutorial, você aprenderá o básico de HTML para construir uma página web do zero.",
-            "link" => "tutorial-html.php"
-        ],
-        [
-            "titulo" => "Introdução ao CSS",
-            "descricao" => "Veja como usar CSS para estilizar seu site e deixá-lo mais atraente.",
-            "link" => "tutorial-css.php"
-        ],
-        [
-            "titulo" => "PHP para Iniciantes",
-            "descricao" => "Um guia introdutório sobre a linguagem PHP e como ela pode ser usada para criar sites dinâmicos.",
-            "link" => "tutorial-php.php"
-        ]
-    ];
+    <h1>Tutoriais mais acessados!</h1>
 
-    foreach ($todos as $tutorial) {
-        echo "
-        <div class='tutorial-card'>
-            <div class='tutorial-header'>{$tutorial['titulo']}</div>
-            <div class='tutorial-body'>
-                <p>{$tutorial['descricao']}</p>
-                <a class='tutorial-link' href='tutorialCompleto.php?id={$tutorial['id_tutorial']}'>Ver Tutorial</a>
-            </div>
-        </div>
-        ";
-    }
-    ?>
-</div>
+    <div class="container">
+        <?php foreach ($todos as $tutorial) { ?>
+            <div class='tutorial-card'>
+                <div class='tutorial-header'><?php echo $tutorial['titulo'] ?>
+                </div>
+                <div class='tutorial-body'>
+                    <p><?php echo $tutorial['descricao'] ?> </p>
 
+                    <a class='tutorial-link' href='tutorialCompleto.php?id=<?php echo $tutorial['id_tutorial'] ?>'>Ver Tutorial</a>
+                    <?php if ($tipo == 'administrador') { ?>
+                        <a href=' alterarTutorial.php?id=<?php echo $tutorial['id_tutorial'] ?>'>Alterar</a>
+                    <a href='../control/excluirTutorialControl.php?id=<?php echo $tutorial['id_tutorial'] ?>' >Excluir</a>
+                    <?php } ?> 
+                </div>
+                </div>
+        <?php } ?>
+
+                    
 
 </body>
-</html>
 
+</html>

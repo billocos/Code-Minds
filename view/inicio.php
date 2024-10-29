@@ -57,7 +57,7 @@ $tipo = $_SESSION["tipo"];
             <div class="option">
                 <h2 class="xebiu">Tutoriais</h2>
                 <p>Gerencie os tutoriais para os usuários da plataforma.</p>
-                <button onclick="window.location.href='tutoriais.html'">Acessar</button>
+                <button onclick="window.location.href='tutoriais.php'">Acessar</button>
             </div>
         </div>
         <br>
