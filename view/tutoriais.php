@@ -157,7 +157,7 @@
         </ul>
 </header>
  
-  <h1>Tutoriais mais acessados!</h1>
+  <h1>veja nossos tutoriais<br> adicionados recentemente!</h1>
 
 <div class="container">
     <?php

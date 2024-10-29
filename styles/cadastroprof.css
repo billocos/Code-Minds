@@ -21,6 +21,7 @@ body {
     display: flex;
     border: #222;
     box-shadow: 5px 5px 10px #222;
+    border-radius: 20px;
 }
 
 .form-image {

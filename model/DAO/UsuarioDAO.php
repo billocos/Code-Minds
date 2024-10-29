@@ -52,8 +52,7 @@ class UsuarioDAO{
         }
     }
 
-    public function excluirUsuario($id_usuario)
-    {
+    public function excluirUsuario($id_usuario){
         try {
             $sql = "DELETE FROM usuario where id_usuario = ?";
             $stmt = $this->pdo->prepare($sql);
