@@ -13,13 +13,15 @@ body {
 }
 
 .form-container {
-    background-color: #cacaf3;
     padding: 60px;
     border-radius: 35px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
     width: 450px;
     text-align: center;
     transition: transform 0.3s ease;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    
 }
 
 .form-container:hover {
@@ -29,7 +31,7 @@ body {
 h2 {
     margin-bottom: 30px;
     font-size: xx-large;
-    color: #0400ff;
+    color: #5654ff;
     font-size: 24px;
     font-weight: 700;
 }
@@ -39,21 +41,22 @@ label {
     display: block;
     margin-bottom: 8px;
     text-align: left;
-    color: #333;
+    color: #ffffff;
 }
 
 input, textarea {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
-    border: 2px solid #c4bebe;
+    border: 2px solid #003cff;
+    background-color: #bcc8ffb6;
     border-radius: 6px;
     font-size: 16px;
     transition: border-color 0.3s ease;
 }
 
 input:focus, textarea:focus {
-    border-color: #0400ff;
+    border-color: #00f7ff;
     outline: none;
     box-shadow: 0 0 8px rgba(74, 144, 226, 0.2);
 }
@@ -73,7 +76,7 @@ input:focus, textarea:focus {
 	text-transform: uppercase;
 	margin: 1rem 0;
 	cursor: pointer;
-	transition: .5s;
+	transition: 1.5s;
 }
 .btn:hover{
 	background-position: right;
@@ -88,4 +91,49 @@ input:focus, textarea:focus {
     button {
         font-size: 16px;
     }
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#title{
+    flex-direction: column;
+    line-height: 10px;
+}
+
+li{
+    display: inline-block;
+    margin: 18px;
+    color: rgb(162, 162, 235);
+}
+
+a{
+    color: rgb(16, 6, 160);
+    border-color: rgb(162, 162, 235);
+}
+
+a:hover{
+    color: rgb(16, 6, 160);
+    transition: 0.3s all;
+}
+
+#acesso{
+    border: 2px solid rgb(16, 6, 160);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+#acesso:hover{
+    background-color: rgb(16, 6, 160);
+    color: rgb(98, 11, 170);
+}
+
+.prin{
+    font-weight: 200;
+    color: rgb(255, 255, 255);
 }

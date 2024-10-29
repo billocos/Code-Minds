@@ -10,49 +10,56 @@ $retorno = $usuarioDAO->buscarUsuarioPorID($id_usuario);
 // var_dump($retorno);
 
 ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Usuário</title>
     <link rel="stylesheet" href="../styles/alterar.css">
-    <title>Document</title>
 </head>
 <body>
-<div class="form-container">
-        <h1>Alterar Dados do Usuário</h1>
-        <form action="../control/alterarUsuarioControl.php" method="post">
+    <div class="container">
+        <h2>Alterar Usuário</h2>
+        <form action="../control/alterarUsuarioControl.php" method="POST">
             <input type="hidden" name="id" value="<?php echo $retorno["id_usuario"]; ?>">
-            <div class="input-group">
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" name="nome" value="<?php echo $retorno["nome"]; ?>">
-            </div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" value="<?php echo $retorno["nome"]; ?>"required>
 
-            <div class="input-group">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" value="<?php echo $retorno["email"]; ?>">
-            </div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="<?php echo $retorno["email"]; ?>"required>
 
-            <div class="input-group">
-                <label for="telefone">Telefone</label>
-                <input type="tel" name="tel" value="<?php echo $retorno["telefone"]; ?>">
-            </div>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" value="<?php echo $retorno["telefone"]; ?>"required>
 
-            <div class="input-group">
-                <label for="senha">Senha</label>
-                <input type="password" name="senha" value="<?php echo $retorno["senha"]; ?>">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" value="<?php echo $retorno["senha"]; ?>"required>
+
+            <label for="tipo_usuario">Tipo de Usuário:</label>
             <select name="tipo" id="" value = "<?php echo $retorno["tipo"]; ?>">
             <option value="aluno">aluno</option>
             <option value="professor">professor</option>
             <option value="administrador">administrador</option>
         </select>
-        </div>
 
-            <button input type="submit">Salvar Alterações</button>
+            <button onclick="confirmChoice()" input type="submit">Salvar Alterações</button>
+            <script>
+                        function confirmChoice() {
+                            if (confirm("Confirmar Alteração?")) {
+                                
+                                alert("Ação confirmada!");
+                            } else {
+                                alert("Alteração cancelada.");
+                            }
+                        }
+                    </script>
         </form>
     </div>
 </body>
-
 </html>
+
+    
+        
     
         

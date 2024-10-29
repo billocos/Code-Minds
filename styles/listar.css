@@ -2,8 +2,47 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    padding: 10;
+    padding: 15;
+    font-weight:600;
     background-image: url(../components/images/fundoimg.png);
+}
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight:600;
+}
+
+#title{
+    flex-direction: column;
+    line-height: 10px;
+}
+
+li{
+    display: inline-block;
+    margin: 18px;
+    color: rgb(162, 162, 235);
+}
+
+a{
+    color: rgb(16, 6, 160);
+    border-color: rgb(162, 162, 235);
+}
+
+a:hover{
+    color: rgb(16, 6, 160);
+    transition: 0.3s all;
+}
+
+#acesso{
+    border: 2px solid rgb(16, 6, 160);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#acesso:hover{
+    background-color: rgb(16, 6, 160);
+    color: rgb(98, 11, 170);
 }
 
 table {
@@ -19,9 +58,9 @@ thead {
 }
 
 th, td {
-    padding: 12px;
+    padding: 13px;
     text-align: left;   
-    border-bottom: 1px solid #c9c3f0;
+    border-bottom: 2px solid #c9c3f0;
 }   
 
 tbody tr:nth-child(even) {

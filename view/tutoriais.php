@@ -173,9 +173,9 @@ $tipo = $_SESSION["tipo"];
                 <li>Home</li>
             </a>
         </ul>
-    </header>
-
-    <h1>Tutoriais mais acessados!</h1>
+</header>
+ 
+  <h1>veja nossos tutoriais<br> adicionados recentemente!</h1>
 
     <div class="container">
         <?php foreach ($todos as $tutorial) { ?>

@@ -13,8 +13,13 @@ include "../control/listarUsuariocontrol.php";
     <link rel="stylesheet" href="../styles/listar.css">
 </head>
 <body>
-    <h1 class="prin">Controle de usuários</h1>
+<header>
+        <ul>
+            <a href="../view/inicio.php" id="acesso"><li>Voltar</li></a>
+        </ul>
+    </header>
     <div class="bloco">
+    <h1 class="prin">Controle de usuários</h1>
     <table>
         <thead>
             <tr>
@@ -37,13 +42,34 @@ include "../control/listarUsuariocontrol.php";
                 <td><?php echo $t["senha"] ?></td>
                 <td><?php echo $t["tipo"] ?></td>
                 <td>
-                    <a class="btn.excluir" href="../control/excluirUsuarioControl.php?id_usuario=<?php echo $t["id_usuario"] ?>">
-                        <button style="background-color: red;"  class="btn">Desativar</button>
+                    <a class="btn.excluir" href="../control/excluirUsuarioControl.php?id_usuario=<?php echo $t["id_usuario"] ?>"
+                    >
+                        <button onclick="confirmChoice()" style="background-color: red;"  class="btn">Desativar</button>
+                        <script>
+                        function confirmChoice() {
+                            if (confirm("Confirmar escolha?")) {
+                                
+                                href="../control/excluirUsuarioControl.php?id_usuario=<?php echo $t["id_usuario"] ?>"
+                                alert("Ação confirmada!");
+                            } else {
+                                alert("Ação cancelada.");
+                            }
+                        }
+                    </script>
                     </a>
+                    
                 </td>
                 <td>
                     <a class="btn.alterar" href="alterarUsuario.php?id_usuario=<?php echo $t["id_usuario"] ;?>">
-                        <button style="background-color: yellow;" class="btn">Alterar</button>
+                        <button onclick="confirmChoice()" style="background-color: yellow;" class="btn">Alterar</button>
+                        <script>
+                        function confirmChoice() {
+                            if (confirm("Configurar?")) {
+                            } else {
+                                alert("Ação cancelada.");
+                            }
+                        }
+                    </script>
                     </a>
 
                 </td>

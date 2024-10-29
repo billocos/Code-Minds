@@ -27,7 +27,6 @@ $tipo = $_SESSION["tipo"];
     <link rel="stylesheet" href="../styles/adm.css">
     <link href="../styles/fonts.css" rel="stylesheet">
     <link href="../styles/media.css" rel="stylesheet">
-    
     <title>Inicio</title>
 </head>
 <body>
@@ -57,7 +56,12 @@ $tipo = $_SESSION["tipo"];
             <div class="option">
                 <h2 class="xebiu">Tutoriais</h2>
                 <p>Gerencie os tutoriais para os usuários da plataforma.</p>
-                <button onclick="window.location.href='tutoriais.php'">Acessar</button>
+                <button onclick="window.location.href='#'">Acessar</button>
+            </div>
+            <div class="option">
+                <h2 class="xebiu">Professores</h2>
+                <p>Gerencie o cadastro dos professores.</p>
+                <button onclick="window.location.href='../view/cadastroprof.php'">Acessar</button>
             </div>
         </div>
         <br>
@@ -85,9 +89,6 @@ $tipo = $_SESSION["tipo"];
                 </div>
 
                 <ul>
-                    <a href="../view/tutoriais.php">
-                        <li>Tutoriais</li>
-                    </a>
                     <a href="../view/sobre.php">
                         <li>Sobre</li>
                     </a>
@@ -95,13 +96,11 @@ $tipo = $_SESSION["tipo"];
                         <li>Contato</li>
                     </a>
                     <a id="acesso">
-                        <li>acessar perfil</li>
+                        <li>Sair</li>
                     </a>
                 </ul>
-
-
-                
-                <div class="full-screen-container">
+            </header>
+            <div class="full-screen-container">
                     <div class="welcome-message">
                         <h1 class="princ">Bem-vindo, <span><?php echo $nome;  ?></span>!</h1>
                         <p>Prepare-se para explorar e expandir seus conhecimentos com todos esses conteúdos diversificados.</p>
@@ -109,7 +108,6 @@ $tipo = $_SESSION["tipo"];
 
                     </div>
                 </div>
-            </header>
 </body>
 
 </html>
@@ -123,18 +121,41 @@ $tipo = $_SESSION["tipo"];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boas-vindas, Professor!</title>
     <link rel="stylesheet" href="../styles/prof.css">
+    <link href="../styles/fonts.css" rel="stylesheet">
+    <link href="../styles/media.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Seja bem-vindo, professor!</h1>
-        <p>Pronto para mais um de seus tutoriais inovadores?</p>
-        <button onclick="window.location.href='criarTutorial.php'">Criar</button>
-    </div>
+<header>
+                <div id="title">
+                    <h1>Code</h1>
+                    <h1>Brain</h1>
+                </div>
+
+                <ul>
+                    <a href="../view/sobre.php">
+                        <li>Sobre</li>
+                    </a>
+                    <a href="../view/contato.php">
+                        <li>Contato</li>
+                    </a>
+                    <a id="acesso">
+                        <li>Sair</li>
+                    </a>
+                </ul>
+            </header>
+            <div class="full-screen-container">
+                    <div class="welcome-message">
+                        <h1 class="princ">Bem-vindo, <span>Professor</span>!</h1>
+                        <p>Que bom que você chegou!<br> Pronto para mais um de seus tutoriais inovadores?</p>
+                        <form action="./criarTutorial.php"><input type="submit" class="button" value="Começar"></form>
+
+                    </div>
+                </div>
 </body>
 </html>
 
-        <p>seja bem vindo <?php echo $nome;
-                            echo '  ' . $tipo ?></p>
+        <!-- <p>seja bem vindo <?php echo $nome;
+                            echo '  ' . $tipo ?></p> -->
     </header>
 
 
