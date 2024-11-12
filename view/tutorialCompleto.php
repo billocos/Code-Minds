@@ -42,6 +42,11 @@
         </div>
         <button class="btn" onclick="window.location.href='tutoriais.html'">Voltar a lista</button>
     </div>
+    <form action="../control/criarComentarioControl.php" method="post">
+        <textarea name="comentario" id=""></textarea>
+        <button type="submit">Comentar</button>
+    </form>
+    
     
 </body>
 </html>

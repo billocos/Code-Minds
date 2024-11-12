@@ -13,7 +13,7 @@
 
     $sucesso = $tutorialDAO->salvarTutorial($tutorialDTO);
 
-    var_dump($sucesso);
+    // var_dump($sucesso);
 
     if($sucesso){
         $msg = "suxesso";
