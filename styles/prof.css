@@ -26,11 +26,13 @@ li{
     display: inline-block;
     margin: 18px;
     color: rgb(162, 162, 235);
+    transition:  0.3s ease-in-out;
 }
 
 a{
     color: rgb(16, 6, 160);
     border-color: rgb(162, 162, 235);
+    transition:  0.3s ease-in-out;
 }
 
 a:hover{

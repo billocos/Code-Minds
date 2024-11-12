@@ -40,8 +40,8 @@
         <div>
             <?php echo nl2br(htmlspecialchars($tutorial['conteudo'])); ?>
         </div>
-        <button class="btn" onclick="window.location.href='tutoriais.html'">Voltar a lista</button>
     </div>
+    <button class="btn" onclick="window.location.href='tutoriais.php'">Voltar a lista</button>
     
 </body>
 </html>

@@ -6,7 +6,6 @@ $nome = $_SESSION["nome"];
 $id = $_SESSION["id_usuario"];
 $tipo = $_SESSION["tipo"];
 //var_dump($todos);
-
 ?>
 
 
@@ -28,6 +27,8 @@ $tipo = $_SESSION["tipo"];
             margin: 0 auto;
             font-weight: 600;
             padding: 15px;
+            background-image: url(../components/images/introtuto.png);
+            background-size: 100%;
         }
 
         header {
@@ -77,7 +78,7 @@ $tipo = $_SESSION["tipo"];
         }
 
         .tutorial-card {
-            background-color: white;
+            background-color: rgb(196, 196, 255);
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
             margin-bottom: 20px;
@@ -117,8 +118,30 @@ $tipo = $_SESSION["tipo"];
             transition: background-color 0.5s ease;
         }
 
+        .tutorial-link2 {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.5s ease;
+        }
+
+        .tutorial-link3 {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: yellow;
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.5s ease;
+        }
+
         .tutorial-link:hover {
-            background-color: #4c49e2;
+            background-color: blue;
         }
 
         h1 {
@@ -157,25 +180,31 @@ $tipo = $_SESSION["tipo"];
             text-align: center;
 
         }
+        .bloco{
+            background-color: transparent;
+            border: 2px solid rgba(255, 255, 255, .2);
+            backdrop-filter: blur(20px);
+            color: #fff;
+            border-radius: 27px;
+            padding: 30px 40px
+        }
     </style>
 </head>
 
 <body>
-
     <header>
         <div id="title">
             <h1>Code</h1>
             <h1>Brain</h1>
         </div>
-
         <ul>
             <a href="./inicio.php" id="acesso">
                 <li>Home</li>
             </a>
         </ul>
 </header>
- 
-  <h1>veja nossos tutoriais<br> adicionados recentemente!</h1>
+ <div class="bloco">
+    <h1>Veja nossos tutoriais<br> adicionados recentemente!</h1>
 
     <div class="container">
         <?php foreach ($todos as $tutorial) { ?>
@@ -187,12 +216,15 @@ $tipo = $_SESSION["tipo"];
 
                     <a class='tutorial-link' href='tutorialCompleto.php?id=<?php echo $tutorial['id_tutorial'] ?>'>Ver Tutorial</a>
                     <?php if ($tipo == 'administrador') { ?>
-                        <a href=' alterarTutorial.php?id=<?php echo $tutorial['id_tutorial'] ?>'>Alterar</a>
-                    <a href='../control/excluirTutorialControl.php?id=<?php echo $tutorial['id_tutorial'] ?>' >Excluir</a>
+                        <a class='tutorial-link2' href=' alterarTutorial.php?id=<?php echo $tutorial['id_tutorial'] ?>'>Alterar</a>
+                    <a class='tutorial-link3' href='../control/excluirTutorialControl.php?id=<?php echo $tutorial['id_tutorial'] ?>' >Excluir</a>
                     <?php } ?> 
                 </div>
                 </div>
         <?php } ?>
+        <br>
+        <input type="submit" onclick="window.location.href='alltutoriais.php'" class="btn" value="Ver todos">
+ </div>
 
                     
 

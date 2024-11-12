@@ -68,9 +68,9 @@ h1{
     background-color: transparent;
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(20px);
-    color: #fff;
+    color: #ff0000;
     border-radius: 10px;
-    padding: 30px 40px
+    padding: 60px 50px;
 }
 
 .admin-container {
@@ -104,9 +104,10 @@ header p {
     padding: 20px;
     border-radius: 10px;
     color: #fff;
-    width: 45%;
+    width: 29%;
     text-align: center;
     transition: transform 0.3s ease;
+    border-color: #796fff;
 }
 
 .option:hover {

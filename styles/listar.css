@@ -27,6 +27,7 @@ li{
 a{
     color: rgb(16, 6, 160);
     border-color: rgb(162, 162, 235);
+    width: 600%;
 }
 
 a:hover{

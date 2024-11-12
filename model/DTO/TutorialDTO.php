@@ -4,6 +4,7 @@
         private $titulo;
         private $id;
         private $conteudo;
+        private $descricao;
 
         public function setTitulo($titulo){
             $this->titulo = $titulo;
@@ -25,7 +26,14 @@
             return $this->conteudo ;
         
         }
-
+        public function setDescricao($descricao){
+            $this->descricao = $descricao;
+        }
+        public function getDescricao(){
+            return $this->descricao ;
+        
+        }
+        
     }
 
 

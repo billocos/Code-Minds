@@ -11,17 +11,18 @@ include_once "../model/DTO/TutorialDTO.php";
     public function salvarTutorial(TutorialDTO $tutorialDTO){
         try {
             //var_dump($usuarioDTO);
-            $sql = "INSERT INTO tutoriais (titulo, conteudo) VALUES (? ,? )";
+            $sql = "INSERT INTO tutoriais (titulo, conteudo, descricao) VALUES (? ,? ,?)";
 
             $stmt = $this->pdo->prepare($sql);
 
             $titulo = $tutorialDTO->getTitulo();
             $conteudo = $tutorialDTO->getConteudo();
+            $descricao = $tutorialDTO->getDescricao();
 
 
             $stmt->bindValue(1, $titulo);
             $stmt->bindValue(2, $conteudo);
-            // $stmt->bindValue(3, $descricao);
+            $stmt->bindValue(3, $descricao);
 
             $retorno = $stmt->execute();
 

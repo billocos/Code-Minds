@@ -26,6 +26,7 @@ li{
     display: inline-block;
     margin: 18px;
     color: rgb(162, 162, 235);
+    transition:  0.3s ease-in-out;
 }
 
 a{
