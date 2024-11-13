@@ -1,10 +1,15 @@
 <?php 
     include_once "../control/listarTutorialControl.php";
     include_once "../model/DAO/TutorialDAO.php";
+    include_once "../model/DAO/ComentarioDAO.php";
+    include_once "../control/listarComentariosControl.php";
+    session_start();
+    $nome = $_SESSION["nome"];
+    $id = $_SESSION["id_usuario"];
 
     $tutorialDAO = new TutorialDAO();
-    $id = $_GET['id'];
-    $tutorial = $tutorialDAO->buscarTutorialPorID($id);
+    $id_tutorial = $_GET['id'];
+    $tutorial = $tutorialDAO->buscarTutorialPorID($id_tutorial);
 
 
    
@@ -42,10 +47,21 @@
         </div>
         <button class="btn" onclick="window.location.href='tutoriais.html'">Voltar a lista</button>
     </div>
-    <form action="../control/criarComentarioControl.php" method="post">
+    <form action="../control/criarComentarioControl.php" method="get">
         <textarea name="comentario" id=""></textarea>
+        <input type="hidden" name="id_tutorial" value="<?php echo $id_tutorial; ?>">
+        <input type="hidden" name="id_usuario" value="<?php echo $id; ?>">
         <button type="submit">Comentar</button>
     </form>
+
+    <div class="comentarios">
+        <?php foreach ($comentarios as $comentario) { ?>
+            <div class="comentario">
+                <p>Por: <?php echo $comentario['nome']; ?></p>
+                <p><?php echo $comentario['comentario']; ?></p>
+                
+            </div>
+        <?php } ?>
     
     
 </body>
