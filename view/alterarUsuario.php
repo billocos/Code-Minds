@@ -31,7 +31,7 @@ $retorno = $usuarioDAO->buscarUsuarioPorID($id_usuario);
             <input type="email" id="email" name="email" value="<?php echo $retorno["email"]; ?>"required>
 
             <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" name="telefone" value="<?php echo $retorno["telefone"]; ?>"required>
+            <input type="tel" id="telefone" name="tel" value="<?php echo $retorno["telefone"]; ?>"required>
 
             <label for="senha">Senha:</label>
             <input type="password" id="senha" name="senha" value="<?php echo $retorno["senha"]; ?>"required>

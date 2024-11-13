@@ -11,26 +11,34 @@ $retorno = $tutorialDAO->buscarTutorialPorID($id_tutorial);
 
 ?>
 
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>alterar tutorial</title>
+    <title>Adicionar Tutorial</title>
+    <link rel="stylesheet" href="../styles/alterartuto.css">
+    <link rel="stylesheet" href="../styles/media.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
 </head>
 <body>
-    <h1>alterar tutorial</h1>
-    
-    
-    <form action="../control/alterarTutorialControl.php" method="post">
+    <div class="form-container">
+        <h2>ALTERAR TUTORIAL</h2>
+        <form action="../control/alterarTutorialControl.php" method="post">
         <input type="hidden" name="id_tutorial" value="<?php echo $id_tutorial; ?>">
         <label for="nome">titulo:</label>
         <input type="text" name="titulo" id="nome" value="<?php echo $retorno['titulo']; ?>">
-        <br>
-        <textarea name="conteudo" id=""></textarea>
-        <label for="descricao">Descrição:</label>
-        <textarea name="descricao" id="descricao" cols="30" rows="10"><?php echo $retorno['descricao']; ?></textarea>
-        <button type="submit">Salvar Alterações</button>
+
+            <label for="Descricao">Descrição do Tutorial:</label>
+            <textarea name="descricao" id="descricao" ><?php echo $retorno['descricao']; ?></textarea>
+
+            <label for="tutorial">Conteúdo do Tutorial:</label>
+            <textarea cols="10" rows="5" id="" name="tutorial"required></textarea required>
+
+            <button class="btn" type="submit">Salvar Alterações</button>
+        </form>
+    </div>
+
 </body>
+
 </html>

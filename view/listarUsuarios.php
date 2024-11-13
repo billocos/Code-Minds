@@ -13,12 +13,12 @@ include "../control/listarUsuariocontrol.php";
     <link rel="stylesheet" href="../styles/listar.css">
 </head>
 <body>
-<header>
+    <div class="bloco">
+        <header>
         <ul>
             <a href="../view/inicio.php" id="acesso"><li>Voltar</li></a>
         </ul>
     </header>
-    <div class="bloco">
     <h1 class="prin">Controle de usuários</h1>
     <table>
         <thead>
@@ -48,9 +48,8 @@ include "../control/listarUsuariocontrol.php";
                         <script>
                         function confirmChoice() {
                             if (confirm("Confirmar escolha?")) {
-                                
-                                href="../control/excluirUsuarioControl.php?id_usuario=<?php echo $t["id_usuario"] ?>"
-                                alert("Ação confirmada!");
+                                alert("Ação confirmada!");alert("Ação confirmada!");
+                            
                             } else {
                                 alert("Ação cancelada.");
                             }

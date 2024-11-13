@@ -45,7 +45,6 @@
         <div>
             <?php echo nl2br(htmlspecialchars($tutorial['conteudo'])); ?>
         </div>
-        <button class="btn" onclick="window.location.href='tutoriais.html'">Voltar a lista</button>
     </div>
     <form action="../control/criarComentarioControl.php" method="get">
         <textarea name="comentario" id=""></textarea>

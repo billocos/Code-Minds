@@ -38,7 +38,7 @@ $tipo = $_SESSION["tipo"];
         </div>
 
         <ul>
-            <a href="../index.php" id="acesso"><li>Sair</li></a>
+            <a href="./logOff.php" id="acesso"><li>Sair</li></a>
         </ul>
     </header>
     <br>
@@ -51,17 +51,17 @@ $tipo = $_SESSION["tipo"];
             <div class="option">
                 <h2 class="xebiu">Monitoramento</h2>
                 <p>Acesse as ferramentas de monitoramento de usuários.</p>
-                <button onclick="window.location.href='../view/listarUsuarios.php'">Acessar</button>
+                <button onclick="window.location.href='listarUsuarios.php'">Acessar</button>
             </div>
             <div class="option">
                 <h2 class="xebiu">Tutoriais</h2>
                 <p>Gerencie os tutoriais para os usuários da plataforma.</p>
-                <button onclick="window.location.href='#'">Acessar</button>
+                <button onclick="window.location.href='tutoriais.php'">Acessar</button>
             </div>
             <div class="option">
                 <h2 class="xebiu">Professores</h2>
                 <p>Gerencie o cadastro dos professores.</p>
-                <button onclick="window.location.href='../view/cadastroprof.php'">Acessar</button>
+                <button onclick="window.location.href='cadastroprof.php'">Acessar</button>
             </div>
         </div>
         <br>
@@ -95,9 +95,7 @@ $tipo = $_SESSION["tipo"];
                     <a href="../view/contato.php">
                         <li>Contato</li>
                     </a>
-                    <a id="acesso">
-                        <li>Sair</li>
-                    </a>
+                    <a href="./logOff.php" id="acesso"><li>Sair</li></a>
                 </ul>
             </header>
             <div class="full-screen-container">
@@ -138,9 +136,7 @@ $tipo = $_SESSION["tipo"];
                     <a href="../view/contato.php">
                         <li>Contato</li>
                     </a>
-                    <a id="acesso">
-                        <li>Sair</li>
-                    </a>
+                    <a href="./logOff.php" id="acesso"><li>Sair</li></a>
                 </ul>
             </header>
             <div class="full-screen-container">

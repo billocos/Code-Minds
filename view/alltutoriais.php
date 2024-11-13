@@ -17,11 +17,11 @@
         </div>
 
         <ul>
-            <a id="acesso" href="../view/inicio.php"><li>Voltar</li></a>
+            <a id="acesso" href="./tutoriais.php"><li>Voltar</li></a>
         </ul>
     </header>
 <div class="bloco">
-    <br><br>
+    <br>
 <div class="container">
         <h1 class="hpre">Explore nossos Tutoriais!</h1>
         <p>Escolha uma linguagem de programação.</p>

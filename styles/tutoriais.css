@@ -37,8 +37,8 @@ a{
 }
 
 a:hover{
-    color: rgb(92, 86, 179);
-    transition: 2.0s all;
+    color: rgb(255, 255, 255);
+    transition: 0.4s all;
 }
 
 #acesso{

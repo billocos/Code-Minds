@@ -6,6 +6,10 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+body{
+    background-image: url(../components/images/index.png);
+}
 section{
     position: relative;
     width: 100%;
@@ -17,6 +21,8 @@ section{
     align-items: center;
     background: #0f0f0f;
     overflow: hidden;
+    background-image: url(../components/images/index.png);
+    background-size: 100%;
 }
 .circle{
     position: absolute;

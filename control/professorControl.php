@@ -25,9 +25,7 @@ $sucesso = $usuarioDAO->salvarUsuario($usuarioDTO);
 var_dump($sucesso);
 
 if ($sucesso) {
-    
-    
-    header("Location:../view/login.php");
+    header("Location:../view/inicio.php");
 } else {
     $msg = "deu erro";
 }

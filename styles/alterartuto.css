@@ -1,0 +1,139 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+    background-image: url(../components/images/fundoprin.png);
+    background-size: 100%;
+}
+
+.form-container {
+    padding: 60px;
+    border-radius: 35px;
+    width: 450px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    
+}
+
+.form-container:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-size: xx-large;
+    color: #5654ff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+    text-align: left;
+    color: #ffffff;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #003cff;
+    background-color: #bcc8ffb6;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #00f7ff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.2);
+}
+
+.btn{
+	display: block;
+	width: 100%;
+	height: 50px;
+	border-radius: 25px;
+	outline: none;
+	border: none;
+	background-image: linear-gradient(to right, #0051ff, #7598e4, #002fff);
+	background-size: 200%;
+	font-size: 1.2rem;
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+	margin: 1rem 0;
+	cursor: pointer;
+	transition: 1.5s;
+}
+.btn:hover{
+	background-position: right;
+}
+
+@media (max-width: 600px) {
+    .form-container {
+        width: 100%;
+        padding: 30px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#title{
+    flex-direction: column;
+    line-height: 10px;
+}
+
+li{
+    display: inline-block;
+    margin: 18px;
+    color: rgb(162, 162, 235);
+}
+
+a{
+    color: rgb(16, 6, 160);
+    border-color: rgb(162, 162, 235);
+}
+
+a:hover{
+    color: rgb(16, 6, 160);
+    transition: 0.3s all;
+}
+
+#acesso{
+    border: 2px solid rgb(16, 6, 160);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+#acesso:hover{
+    background-color: rgb(16, 6, 160);
+    color: rgb(98, 11, 170);
+}
+
+.prin{
+    font-weight: 200;
+    color: rgb(255, 255, 255);
+}

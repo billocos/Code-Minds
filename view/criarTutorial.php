@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../styles/fonts.css">
 </head>
 <body>
+    <h1>Seja bem vindo ao painel de criação, feito para desenvolver seu tutoriais!</h1>
     <div class="form-container">
         <h2>ADICIONAR TUTORIAL</h2>
         <form action="../control/criarTutorialControl.php" method="post">
@@ -16,14 +17,15 @@
             <input type="text" id="nome" name="nome" required>
 
             <label for="Descricao">Descrição do Tutorial:</label>
-            <textarea id="" name="tutorial"required></textarea required>
+            <textarea id="" name="descricao"required></textarea required>
 
             <label for="tutorial">Conteúdo do Tutorial:</label>
             <textarea id="" name="tutorial"required></textarea required>
 
-            
-
-            <button class="btn" type="submit">Enviar Tutorial</button>
+            <button class="btn" type="submit" >Enviar Tutorial</button>
+        <script>
+            alert("Tutorial Feito com sucesso!")
+        </script>
         </form>
     </div>
 
