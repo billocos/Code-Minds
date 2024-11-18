@@ -1,15 +1,19 @@
-<?php
-include("../control/listarTutorialControl.php");
+<?php 
+   
+    
 
-session_start();
-$nome = $_SESSION["nome"];
-$id = $_SESSION["id_usuario"];
-$tipo = $_SESSION["tipo"];
-//var_dump($todos);
-?>
+     
+     include_once "../model/DAO/TutorialDAO.php";
+     include_once "../model/DTO/TutorialDTO.php";
 
+    $dao = new TutorialDAO();
+    $pesquisa = $_GET['pesquisa'];
+    $tutorial = $dao->pesquisarTutorial($pesquisa);
+    // var_dump($tutorial);
+    
+    ?>
 
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -17,7 +21,7 @@ $tipo = $_SESSION["tipo"];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/fonts.css">
     <link rel="stylesheet" href="../styles/media.css">
-    <title>Tutoriais</title>
+    <title>Resultado da busca</title>
     <style>
         body {
             background-color: #222;
@@ -203,15 +207,15 @@ $tipo = $_SESSION["tipo"];
             </a>
         </ul>
 </header>
-<form action="resultadodapesquisa.php" method="get">
+<!-- <form action="../control/pesquisarControl.php" method="get">
     <input type="text" name="pesquisa" id="">
-    <button class="btn" type="submit">Pesquisar</button>
+    <button class="btn" type="submit">Pesquisar</button> -->
 </form>
  <div class="bloco">
-    <h1>Veja nossos tutoriais<br> adicionados recentemente!</h1>
-
+    <h1>resultados da busca</h1>
+    <?php if ($tutorial){?>
     <div class="container">
-        <?php foreach ($todos as $tutorial) { ?>
+        <?php foreach ($tutorial as $tutorial) { ?>
             <div class='tutorial-card'>
                 <div class='tutorial-header'><?php echo $tutorial['titulo'] ?>
                 </div>
@@ -219,15 +223,12 @@ $tipo = $_SESSION["tipo"];
                     <p><?php echo $tutorial['descricao'] ?> </p>
 
                     <a class='tutorial-link' href='tutorialCompleto.php?id=<?php echo $tutorial['id_tutorial'] ?>'>Ver Tutorial</a>
-                    <?php if ($tipo == 'administrador') { ?>
-                        <a class='tutorial-link2' href=' alterarTutorial.php?id=<?php echo $tutorial['id_tutorial'] ?>'>Alterar</a>
-                    <a class='tutorial-link3' href='../control/excluirTutorialControl.php?id=<?php echo $tutorial['id_tutorial'] ?>' >Excluir</a>
-                    <?php } ?> 
+                     
                 </div>
                 </div>
-        <?php } ?>
+        <?php }}else{echo "Nenhum tutorial encontrado";} ?>
         <br>
-        <input type="submit" onclick="window.location.href='alltutoriais.php'" class="btn" value="Ver todos">
+        <input type="submit" onclick="window.location.href='tutoriais.php'" class="btn" value="Voltar a busca">
  </div>
 
                     
@@ -235,3 +236,5 @@ $tipo = $_SESSION["tipo"];
 </body>
 
 </html>
+
+

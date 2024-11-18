@@ -101,4 +101,15 @@ include_once "../model/DTO/TutorialDTO.php";
             echo $exe->getMessage();
         }
     }
-}
+    public function pesquisarTutorial($pesquisa){
+        try {
+            $sql = "SELECT*FROM TUTORIAIS WHERE titulo LIKE '%{$pesquisa}%'";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            $retorno = $stmt->fetchALL(PDO::FETCH_ASSOC);
+            return $retorno;
+        } catch (PDOException $exe) {
+            echo $exe->getMessage();
+        }
+    }
+        }
