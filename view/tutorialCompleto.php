@@ -46,21 +46,25 @@
             <?php echo nl2br(htmlspecialchars($tutorial['conteudo'])); ?>
         </div>
     </div>
-    <form action="../control/criarComentarioControl.php" method="get">
-        <textarea name="comentario" id=""></textarea>
-        <input type="hidden" name="id_tutorial" value="<?php echo $id_tutorial; ?>">
-        <input type="hidden" name="id_usuario" value="<?php echo $id; ?>">
-        <button type="submit">Comentar</button>
-    </form>
+    <div class="comment-section">
+        <form action="../control/criarComentarioControl.php" method="get">
+            <textarea class="comment-input" placeholder="Escreva seu comentário..." name="comentario"></textarea>
+            <input type="hidden" name="id_tutorial" value="<?php echo $id_tutorial; ?>">
+            <input type="hidden" name="id_usuario" value="<?php echo $id; ?>">
+            <button class="comment-submit" type="submit">Enviar Comentário</button>
+        </form>
+    </div>
 
-    <div class="comentarios">
-        <?php foreach ($comentarios as $comentario) { ?>
-            <div class="comentario">
-                <p>Por: <?php echo $comentario['nome']; ?></p>
-                <p><?php echo $comentario['comentario']; ?></p>
-                
-            </div>
-        <?php } ?>
+    <div class="comments-display">
+        <div class="comment">
+            <?php foreach ($comentarios as $comentario) { ?>
+                <div class="comment-header">
+                    <span class="comment-author">Por: <?php echo $comentario['nome']; ?></span>
+    </div>
+        <p class="comment-text"><?php echo $comentario['comentario']; ?></p>
+    </div>
+
+    <?php } ?>
     
     
 </body>

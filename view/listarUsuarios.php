@@ -44,9 +44,9 @@ include "../control/listarUsuariocontrol.php";
                 <td>
                     <a class="btn.excluir" href="../control/excluirUsuarioControl.php?id_usuario=<?php echo $t["id_usuario"] ?>"
                     >
-                        <button onclick="confirmChoice()" style="background-color: red;"  class="btn">Desativar</button>
+                        <button onclick="confirmChoicee()" style="background-color: red;"  class="btn">Desativar</button>
                         <script>
-                        function confirmChoice() {
+                        function confirmChoicee() {
                             if (confirm("Confirmar escolha?")) {
                                 alert("Ação confirmada!");alert("Ação confirmada!");
                             

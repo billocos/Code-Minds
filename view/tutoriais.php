@@ -186,8 +186,70 @@ $tipo = $_SESSION["tipo"];
             backdrop-filter: blur(20px);
             color: #fff;
             border-radius: 27px;
-            padding: 30px 40px
+            padding: 30px 40px;
+            align-items:center;
         }
+
+        .search-form {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    padding: 5px 15px;
+    max-width: 400px;
+    width: 100%;
+    height: 40px;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-form:hover,
+.search-form:focus-within {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    padding: 10px;
+    color: #333;
+}
+
+.search-input::placeholder {
+    color: #aaa;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.search-button img {
+    width: 40px;
+    height: 40px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.search-button:hover img {
+    filter: none;
+}
+
+.bloquinho{
+    align-items: center;
+    text-align: center;
+}
+
+
     </style>
 </head>
 
@@ -197,19 +259,27 @@ $tipo = $_SESSION["tipo"];
             <h1>Code</h1>
             <h1>Brain</h1>
         </div>
+        <div class="bloquinho">
+        <form action="resultadodapesquisa.php" method="get" class="search-form">
+    <input type="text" name="pesquisa" id="pesquisa" class="search-input" placeholder="O que você está procurando?">
+    <button type="submit" class="search-button">
+        <img src="../components/images/lupa.png" alt="Pesquisar">
+    </button>
+</form>
+   </div>
         <ul>
             <a href="./inicio.php" id="acesso">
                 <li>Home</li>
             </a>
         </ul>
 </header>
-<form action="resultadodapesquisa.php" method="get">
-    <input type="text" name="pesquisa" id="">
-    <button class="btn" type="submit">Pesquisar</button>
-</form>
+<br><br>
+
  <div class="bloco">
+
     <h1>Veja nossos tutoriais<br> adicionados recentemente!</h1>
 
+<br>
     <div class="container">
         <?php foreach ($todos as $tutorial) { ?>
             <div class='tutorial-card'>

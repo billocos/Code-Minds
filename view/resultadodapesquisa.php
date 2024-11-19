@@ -207,9 +207,6 @@
             </a>
         </ul>
 </header>
-<!-- <form action="../control/pesquisarControl.php" method="get">
-    <input type="text" name="pesquisa" id="">
-    <button class="btn" type="submit">Pesquisar</button> -->
 </form>
  <div class="bloco">
     <h1>resultados da busca</h1>
