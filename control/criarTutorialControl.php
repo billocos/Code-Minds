@@ -19,9 +19,9 @@
     // var_dump($sucesso);
 
     if($sucesso){
-        header("Location:../view/inicio.php");
+        header("Location:../view/inicio.php?status=sucesso");
     }else{
-        $msg = "deu erro";
+        header("Location:../view/inicio.php?status=erro");
     }
     echo "{$msg}";
     // var_dump($_POST);

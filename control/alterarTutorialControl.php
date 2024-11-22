@@ -29,7 +29,7 @@ $sucesso = $tutorialDAO->alterarTutorial($tutorialDTO);
 // var_dump($usuarioDTO);
 
 if ($sucesso) {
-    header("Location: ../view/tutoriais.php");
+    header("Location: ../view/tutoriais.php?status=sucesso");
 }else{
     echo "erro";
 }

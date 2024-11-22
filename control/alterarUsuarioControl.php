@@ -30,7 +30,7 @@ $sucesso = $usuarioDAO->alterarUsuario($usuarioDTO);
 // var_dump($usuarioDTO);
 
 if ($sucesso) {
-    header("Location: ../view/listarUsuarios.php");
+    header("Location: ../view/listarUsuarios.php?status=sucesso");
 }else{
     echo "erro";
 }

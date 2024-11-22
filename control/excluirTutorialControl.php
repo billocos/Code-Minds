@@ -10,6 +10,6 @@
     $sucesso = $tutorialDAO->excluirTutorial($id_tutorial);
 
     if($sucesso){
-        header("Location:../view/tutoriais.php");
+        header("Location:../view/tutoriais.php?status=sucesso");
     }
 ?>

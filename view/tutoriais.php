@@ -17,6 +17,7 @@ $tipo = $_SESSION["tipo"];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/fonts.css">
     <link rel="stylesheet" href="../styles/media.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css">
     <title>Tutoriais</title>
     <style>
         body {
@@ -249,6 +250,8 @@ $tipo = $_SESSION["tipo"];
     text-align: center;
 }
 
+    
+
 
     </style>
 </head>
@@ -261,7 +264,8 @@ $tipo = $_SESSION["tipo"];
         </div>
         <div class="bloquinho">
         <form action="resultadodapesquisa.php" method="get" class="search-form">
-    <input type="text" name="pesquisa" id="pesquisa" class="search-input" placeholder="O que você está procurando?">
+    <input type="text" name="pesquisa" id="pesquisa" class="search-input" placeholder="O que você está procurando?" 
+    required>
     <button type="submit" class="search-button">
         <img src="../components/images/lupa.png" alt="Pesquisar">
     </button>
@@ -299,6 +303,34 @@ $tipo = $_SESSION["tipo"];
         <br>
         <input type="submit" onclick="window.location.href='alltutoriais.php'" class="btn" value="Ver todos">
  </div>
+ <div id="customAlert" class="alert"></div>
+    </div>
+	
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
+    <script>
+        // Captura o valor do parâmetro `status` na URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const status = urlParams.get('status');
+
+        // Exibe alerta com base no status
+        if (status === 'sucesso') {
+            Swal.fire({
+                icon: 'success',
+                title: 'Sucesso!',
+                text: 'Ação realizada com sucesso!',
+                showConfirmButton: false,
+                timer: 1500
+            });
+        } else if (status === 'erro') {
+            Swal.fire({
+                icon: 'error',
+                title: 'Erro!',
+                text: 'Houve um erro ao realizar a ação. Tente novamente.',
+                showConfirmButton: true
+            });
+        }
+    </script>
 
                     
 

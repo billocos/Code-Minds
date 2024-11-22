@@ -25,11 +25,10 @@ $sucesso = $usuarioDAO->salvarUsuario($usuarioDTO);
 var_dump($sucesso);
 
 if ($sucesso) {
-    
-    
-    header("Location:../view/login.php");
+    header("Location: ../view/login.php?status=sucesso");
 } else {
-    $msg = "deu erro";
+    header("Location: ../view/cadastrouser.php?status=erro");
 }
+exit();
 // echo "{$msg}";
 ?>

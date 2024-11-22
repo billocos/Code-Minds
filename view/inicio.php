@@ -27,10 +27,12 @@ $tipo = $_SESSION["tipo"];
     <link rel="stylesheet" href="../styles/adm.css">
     <link href="../styles/fonts.css" rel="stylesheet">
     <link href="../styles/media.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css">
     <title>Inicio</title>
+    
 </head>
 <body>
-    <style></style>
+    
     <header>
         <div id="title">
             <h2>Code</h2>
@@ -66,6 +68,33 @@ $tipo = $_SESSION["tipo"];
         </div>
         <br>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
+
+<script>
+    // Captura o valor do parâmetro `status` na URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const status = urlParams.get('status');
+
+    // Exibe alerta SweetAlert com base no status de envio
+    if (status === 'sucesso') {
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Professor cadastrado com sucesso!',
+            showConfirmButton: false,
+            timer: 1500
+        });
+    } else if (status === 'erro') {
+        Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'Erro ao enviar tutorial!',
+            text: 'Por favor, verifique os campos e tente novamente.',
+            showConfirmButton: true
+        });
+    }
+</script>
+    
 </body>
 </html>
        
@@ -121,6 +150,8 @@ $tipo = $_SESSION["tipo"];
     <link rel="stylesheet" href="../styles/prof.css">
     <link href="../styles/fonts.css" rel="stylesheet">
     <link href="../styles/media.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css">
+    
 </head>
 <body>
 <header>
@@ -147,6 +178,33 @@ $tipo = $_SESSION["tipo"];
 
                     </div>
                 </div>
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
+
+<script>
+    // Captura o valor do parâmetro `status` na URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const status = urlParams.get('status');
+
+    // Exibe alerta SweetAlert com base no status de envio
+    if (status === 'sucesso') {
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Tutorial enviado com sucesso!',
+            showConfirmButton: false,
+            timer: 1500
+        });
+    } else if (status === 'erro') {
+        Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'Erro ao enviar tutorial!',
+            text: 'Por favor, verifique os campos e tente novamente.',
+            showConfirmButton: true
+        });
+    }
+</script>
+               
 </body>
 </html>
 

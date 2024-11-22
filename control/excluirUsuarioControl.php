@@ -10,6 +10,6 @@
     $sucesso = $usuarioDAO->excluirUsuario($id_usuario);
 
     if($sucesso){
-        header("Location:../view/listarUsuarios.php");
+        header("Location:../view/listarUsuarios.php?status=sucesso");
     }
 ?>
