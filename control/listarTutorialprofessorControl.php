@@ -6,7 +6,7 @@
     // $id_usuario = $_POST['id_usuario'];
     
 
-    $todos = $tutorialDAO->listarTutoriais();
+    $todos = $tutorialDAO->listarTutoriaisPorProfessor();
     
 
     // echo "<pre>";

@@ -1,11 +1,13 @@
 <?php
-include("../control/listarTutorialControl.php");
+include_once('../model/DAO/TutorialDAO.php');
 
 session_start();
-$nome = $_SESSION["nome"];
-$id = $_SESSION["id_usuario"];
-$tipo = $_SESSION["tipo"];
-//var_dump($todos);
+$id_professor = $_SESSION['id_usuario']; // ou o ID do professor desejado
+$tutorialDAO = new TutorialDAO();
+
+// Passando o ID do professor como argumento
+$todos = $tutorialDAO->listarTutoriaisPorProfessor($id_professor);
+
 ?>
 
 
@@ -287,17 +289,16 @@ $tipo = $_SESSION["tipo"];
     <div class="container">
         <?php foreach ($todos as $tutorial) { ?>
             <div class='tutorial-card'>
-                por : <?php echo $tutorial['nome'] ?>
                 <div class='tutorial-header'><?php echo $tutorial['titulo'] ?>
                 </div>
                 <div class='tutorial-body'>
                     <p><?php echo $tutorial['descricao'] ?> </p>
 
                     <a class='tutorial-link' href='tutorialCompleto.php?id=<?php echo $tutorial['id_tutorial'] ?>'>Ver Tutorial</a>
-                    <?php if ($tipo == 'administrador') { ?>
+                    
                         <a class='tutorial-link2' href=' alterarTutorial.php?id=<?php echo $tutorial['id_tutorial'] ?>'>Alterar</a>
                     <a class='tutorial-link3' href='../control/excluirTutorialControl.php?id=<?php echo $tutorial['id_tutorial'] ?>' >Excluir</a>
-                    <?php } ?> 
+                   
                 </div>
                 </div>
         <?php } ?>

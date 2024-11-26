@@ -5,6 +5,7 @@
         private $id;
         private $conteudo;
         private $descricao;
+        private $id_usuario;
 
         public function setTitulo($titulo){
             $this->titulo = $titulo;
@@ -32,6 +33,13 @@
         public function getDescricao(){
             return $this->descricao ;
         
+        }
+        public function setIdUsuario($id_usuario){
+            $this->id_usuario = $id_usuario;
+        }
+        
+        public function getIdUsuario(){
+            return $this->id_usuario;
         }
         
     }

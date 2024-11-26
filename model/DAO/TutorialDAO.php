@@ -11,18 +11,20 @@ include_once "../model/DTO/TutorialDTO.php";
     public function salvarTutorial(TutorialDTO $tutorialDTO){
         try {
             //var_dump($usuarioDTO);
-            $sql = "INSERT INTO tutoriais (titulo, conteudo, descricao) VALUES (? ,? ,?)";
+            $sql = "INSERT INTO tutoriais (titulo, conteudo, descricao, id_usuario) VALUES (? ,? ,? ,?)";
 
             $stmt = $this->pdo->prepare($sql);
 
             $titulo = $tutorialDTO->getTitulo();
             $conteudo = $tutorialDTO->getConteudo();
             $descricao = $tutorialDTO->getDescricao();
+            $id_usuario = $tutorialDTO->getIdUsuario();
 
 
             $stmt->bindValue(1, $titulo);
             $stmt->bindValue(2, $conteudo);
             $stmt->bindValue(3, $descricao);
+            $stmt->bindValue(4, $id_usuario);
 
             $retorno = $stmt->execute();
 
@@ -38,7 +40,8 @@ include_once "../model/DTO/TutorialDTO.php";
     public function listarTutoriais(){
 
         try {
-            $sql = "SELECT * FROM tutoriais ";
+            $sql = "SELECT tutoriais.*, usuario.nome 
+        FROM tutoriais INNER JOIN usuario ON tutoriais.id_usuario = usuario.id_usuario;";
             $stmt = $this->pdo->prepare($sql);
 
             $stmt->execute();
@@ -76,12 +79,13 @@ include_once "../model/DTO/TutorialDTO.php";
     }
     public function alterarTutorial(TutorialDTO $tutorialDTO){
         try {
-            $sql = "UPDATE TUTORIAIS SET titulo=?,conteudo=? WHERE id_tutorial=?";
+            $sql = "UPDATE TUTORIAIS SET titulo=?,conteudo=?,id_usuario=? WHERE id_tutorial=?";
             $stmt = $this->pdo->prepare($sql);
 
             $id_tutorial = $tutorialDTO->getId();
             $titulo = $tutorialDTO->getTitulo();
             $conteudo = $tutorialDTO->getConteudo();
+            $id_usuario = $tutorialDTO->getIdUsuario();
             
             
             
@@ -89,7 +93,8 @@ include_once "../model/DTO/TutorialDTO.php";
            
             $stmt->bindValue(1, $titulo);
             $stmt->bindValue(2, $conteudo);
-            $stmt->bindValue(3, $id_tutorial);
+            $stmt->bindValue(3, $id_usuario);
+            $stmt->bindValue(4, $id_tutorial);
             
             
             
@@ -104,6 +109,18 @@ include_once "../model/DTO/TutorialDTO.php";
     public function pesquisarTutorial($pesquisa){
         try {
             $sql = "SELECT*FROM TUTORIAIS WHERE titulo LIKE '%{$pesquisa}%'";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            $retorno = $stmt->fetchALL(PDO::FETCH_ASSOC);
+            return $retorno;
+        } catch (PDOException $exe) {
+            echo $exe->getMessage();
+        }
+    }
+    public function listarTutoriaisPorProfessor($id_usuario){
+        try {
+            $sql = "SELECT tutoriais.*,u.nome FROM tutoriais 
+            INNER JOIN usuario as u ON tutoriais.id_usuario = u.id_usuario WHERE tutoriais.id_usuario = '{$id_usuario}'";
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
             $retorno = $stmt->fetchALL(PDO::FETCH_ASSOC);

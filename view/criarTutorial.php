@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+$nome = $_SESSION["nome"];
+$id = $_SESSION["id_usuario"];
+$tipo = $_SESSION["tipo"];
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -22,6 +34,7 @@
 
             <label for="tutorial">Conteúdo do Tutorial:</label>
             <textarea id="tutorial" name="tutorial" required></textarea>
+            <input type="hidden" name="id_usuario" value="<?php echo $id; ?>">
 
             <button class="btn" type="submit">Enviar Tutorial</button>
         </form>
