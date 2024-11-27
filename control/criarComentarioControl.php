@@ -17,14 +17,11 @@
     $comentarioDTO->setIdUsuario($id_usuario);
 
     $sucesso = $comentarioDAO->salvarComentario($comentarioDTO);
-    
-    if($sucesso){
-        $msg = "suxesso";
+
+    if ($sucesso) {
+        header("Location: ../view/tutoriais.php?status=sucesso");
     }else{
-        $msg = "deu erro";
+        echo "erro";
     }
-    echo "{$msg}";
-
-
 
 ?>

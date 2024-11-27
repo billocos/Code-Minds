@@ -250,6 +250,11 @@ $tipo = $_SESSION["tipo"];
     text-align: center;
 }
 
+.spam{
+    font-size: 24px;
+    color: rgb(162, 162, 235);
+}
+
     
 
 
@@ -287,8 +292,9 @@ $tipo = $_SESSION["tipo"];
     <div class="container">
         <?php foreach ($todos as $tutorial) { ?>
             <div class='tutorial-card'>
-                por : <?php echo $tutorial['nome'] ?>
+                
                 <div class='tutorial-header'><?php echo $tutorial['titulo'] ?>
+                <br><SPAN class="spam">Por: <?php echo $tutorial['nome'] ?></SPAN>
                 </div>
                 <div class='tutorial-body'>
                     <p><?php echo $tutorial['descricao'] ?> </p>
