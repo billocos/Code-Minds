@@ -21,10 +21,7 @@
     if($sucesso){
         header("Location: ../view/tutorialCompleto.php?id={$id_tutorial}&status=sucesso");
     }else{
-        $msg = "deu erro";
+        echo "erro";
     }
-    echo "{$msg}";
-
-
 
 ?>

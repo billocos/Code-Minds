@@ -18,8 +18,8 @@ include "../control/listarUsuariocontrol.php";
         <ul>
             <a href="../view/inicio.php" id="acesso"><li>Voltar</li></a>
         </ul>
+        
     </header>
-    <h1 class="prin">Controle de usuários</h1>
     <table>
         <thead>
             <tr>
@@ -48,7 +48,7 @@ include "../control/listarUsuariocontrol.php";
                         <script>
                         function confirmChoicee() {
                             if (confirm("Confirmar escolha?")) {
-                                alert("Ação confirmada!");alert("Ação confirmada!");
+                                alert("Ação confirmada!");
                             
                             } else {
                                 alert("Ação cancelada.");
