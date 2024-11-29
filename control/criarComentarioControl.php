@@ -19,7 +19,7 @@
     $sucesso = $comentarioDAO->salvarComentario($comentarioDTO);
     
     if($sucesso){
-        $msg = "suxesso";
+        header("Location: ../view/tutorialCompleto.php?id={$id_tutorial}&status=sucesso");
     }else{
         $msg = "deu erro";
     }
