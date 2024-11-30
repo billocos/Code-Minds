@@ -22,7 +22,8 @@ $tutorial = $tutorialDAO->buscarTutorialPorID($id_tutorial);
     <link rel="stylesheet" href="../styles/clashtuto.css">
     <link rel="stylesheet" href="../styles/media.css">
     <link rel="stylesheet" href="../styles/fonts.css">
-    <link rel="stylesheet" href="../styles/comments.css"> <!-- Novo arquivo CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="../styles/comments.css"> 
     <title><?php echo htmlspecialchars($tutorial['titulo']); ?></title>
     <style>
         /* Estilo da seção de comentários */
@@ -175,6 +176,34 @@ $tutorial = $tutorialDAO->buscarTutorialPorID($id_tutorial);
         <?php } ?>
     <?php } ?>
 </div>
+<div id="customAlert" class="alert"></div>
+    </div>
+	
+    <!-- SweetAlert2 JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
+    <script>
+        // Captura o valor do parâmetro `status` na URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const status = urlParams.get('status');
+
+        // Exibe alerta com base no status
+        if (status === 'sucesso') {
+            Swal.fire({
+                icon: 'success',
+                title: 'Sucesso!',
+                text: 'Ação realizada com sucesso!',
+                showConfirmButton: false,
+                timer: 1500
+            });
+        } else if (status === 'erro') {
+            Swal.fire({
+                icon: 'error',
+                title: 'Erro!',
+                text: 'Houve um erro ao realizar a ação. Tente novamente.',
+                showConfirmButton: true
+            });
+        }
+    </script> -->
 
 </body>
 </html>

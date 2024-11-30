@@ -1,7 +1,5 @@
 <?php
 include "../control/listarUsuariocontrol.php";
-
-
 ?>
 
 <!DOCTYPE html>
@@ -11,15 +9,21 @@ include "../control/listarUsuariocontrol.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabela de Usuários</title>
     <link rel="stylesheet" href="../styles/listar.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-    <div class="bloco">
-        <header>
-        <ul>
-            <a href="../view/inicio.php" id="acesso"><li>Voltar</li></a>
-        </ul>
-        
-    </header>
+<header>
+    <div id="title">
+        <h2>Code</h2>
+        <h2>Minds</h2>
+    </div>
+
+    <ul>
+        <a href="./logOff.php" id="acesso"><li>Sair</li></a>
+    </ul>
+</header>
+<div class="bloco">
+
     <table>
         <thead>
             <tr>
@@ -42,40 +46,89 @@ include "../control/listarUsuariocontrol.php";
                 <td><?php echo $t["senha"] ?></td>
                 <td><?php echo $t["tipo"] ?></td>
                 <td>
-                    <a class="btn.excluir" href="../control/excluirUsuarioControl.php?id_usuario=<?php echo $t["id_usuario"] ?>"
-                    >
-                        <button onclick="confirmChoicee()" style="background-color: red;"  class="btn">Desativar</button>
-                        <script>
-                        function confirmChoicee() {
-                            if (confirm("Confirmar escolha?")) {
-                                alert("Ação confirmada!");
-                            
-                            } else {
-                                alert("Ação cancelada.");
-                            }
-                        }
-                    </script>
-                    </a>
-                    
+                    <!-- Botão Excluir -->
+                    <button 
+                        style="background-color: red;" 
+                        class="btn" 
+                        onclick="confirmDelete(<?php echo $t['id_usuario']; ?>)">
+                        Desativar
+                    </button>
                 </td>
                 <td>
-                    <a class="btn.alterar" href="alterarUsuario.php?id_usuario=<?php echo $t["id_usuario"] ;?>">
-                        <button onclick="confirmChoice()" style="background-color: yellow;" class="btn">Alterar</button>
-                        <script>
-                        function confirmChoice() {
-                            if (confirm("Configurar?")) {
-                            } else {
-                                alert("Ação cancelada.");
-                            }
-                        }
-                    </script>
-                    </a>
-
+                    <!-- Botão Alterar -->
+                    <button 
+                        style="background-color: yellow;" 
+                        class="btn" 
+                        onclick="confirmUpdate(<?php echo $t['id_usuario']; ?>)">
+                        Alterar
+                    </button>
                 </td>
             </tr>
-            <?php } ?>
+        <?php } ?>
         </tbody>
     </table>
 </div>
+
+<!-- Scripts SweetAlert2 -->
+<script>
+    // Função para confirmar exclusão
+    function confirmDelete(id) {
+        Swal.fire({
+            title: 'Você tem certeza?',
+            text: "Esta ação não poderá ser desfeita!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sim, desativar!',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Redireciona para o controlador de exclusão
+                window.location.href = `../control/excluirUsuarioControl.php?id_usuario=${id}`;
+            }
+        });
+    }
+
+    // Função para confirmar alteração
+    function confirmUpdate(id) {
+        Swal.fire({
+            title: 'Alterar dados do usuário?',
+            text: "Você será redirecionado para a página de edição.",
+            icon: 'info',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sim, alterar!',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Redireciona para a página de alteração
+                window.location.href = `alterarUsuario.php?id_usuario=${id}`;
+            }
+        });
+    }
+    const urlParams = new URLSearchParams(window.location.search);
+        const status = urlParams.get('status');
+
+        // Exibe alerta com base no status
+        if (status === 'sucesso') {
+            Swal.fire({
+                icon: 'success',
+                title: 'Sucesso!',
+                text: 'Ação realizada com sucesso!',
+                showConfirmButton: false,
+                timer: 1500
+            });
+        } else if (status === 'erro') {
+            Swal.fire({
+                icon: 'error',
+                title: 'Erro!',
+                text: 'Houve um erro ao realizar a ação. Tente novamente.',
+                showConfirmButton: true
+            });
+        }
+</script>
+
 </body>
 </html>

@@ -28,7 +28,7 @@
     // var_dump($sucesso);
 
     if($sucesso){
-        header("Location:../view/inicio.php?status=sucesso");
+        header("Location:../view/tutoriaisProfessor.php?status=sucesso");
     }else{
         header("Location:../view/inicio.php?status=erro");
     }

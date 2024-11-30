@@ -5,6 +5,7 @@
 
     $comentarioDAO = new ComentarioDAO();
     $id_tutorial = $_GET["id"];
+
     $comentarios = $comentarioDAO->listarComentarios($id_tutorial);
 
     

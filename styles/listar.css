@@ -6,45 +6,6 @@ body {
     font-weight:600;
     background-image: url(../components/images/fundoimg.png);
 }
-header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-weight:600;
-}
-
-#title{
-    flex-direction: column;
-    line-height: 10px;
-}
-
-li{
-    display: inline-block;
-    margin: 18px;
-    color: rgb(162, 162, 235);
-}
-
-a{
-    color: rgb(16, 6, 160);
-    border-color: rgb(162, 162, 235);
-    width: 600%;
-}
-
-a:hover{
-    color: rgb(16, 6, 160);
-    transition: 0.3s all;
-}
-
-#acesso{
-    border: 2px solid rgb(16, 6, 160);
-    padding: 10px;
-    border-radius: 15px;
-}
-
-#acesso:hover{
-    background-color: rgb(16, 6, 160);
-    color: rgb(98, 11, 170);
-}
 
 table {
     width: 100%;
@@ -118,3 +79,43 @@ th {
     font-size: xx-large;
     font-weight:600 ;
 }
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#title{
+    flex-direction: column;
+    line-height: 10px;
+}
+
+li{
+    display: inline-block;
+    margin: 18px;
+    color: rgb(162, 162, 235);
+}
+
+a{
+    color: rgb(16, 6, 160);
+    border-color: rgb(162, 162, 235);
+}
+
+a:hover{
+    color: rgb(16, 6, 160);
+    transition: 0.3s all;
+}
+
+#acesso{
+    border: 2px solid rgb(16, 6, 160);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#acesso:hover{
+    background-color: rgb(16, 6, 160);
+    color: rgb(98, 11, 170);
+}
+

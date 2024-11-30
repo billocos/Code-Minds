@@ -283,7 +283,7 @@ $todos = $tutorialDAO->listarTutoriaisPorProfessor($id_professor);
 
  <div class="bloco">
 
-    <h1>Veja nossos tutoriais<br> adicionados recentemente!</h1>
+    <h1>Veja seus tutoriais<br> adicionados recentemente!</h1>
 
 <br>
     <div class="container">
@@ -296,8 +296,8 @@ $todos = $tutorialDAO->listarTutoriaisPorProfessor($id_professor);
 
                     <a class='tutorial-link' href='tutorialCompleto.php?id=<?php echo $tutorial['id_tutorial'] ?>'>Ver Tutorial</a>
                     
-                        <a class='tutorial-link2' href=' alterarTutorial.php?id=<?php echo $tutorial['id_tutorial'] ?>'>Alterar</a>
-                    <a class='tutorial-link3' href='../control/excluirTutorialControl.php?id=<?php echo $tutorial['id_tutorial'] ?>' >Excluir</a>
+                        <a class='tutorial-link2' href=' alterarTutorialProf.php?id=<?php echo $tutorial['id_tutorial'] ?>'>Alterar</a>
+                    <a class='tutorial-link3' href='../control/excluirTutorialControlProf.php?id=<?php echo $tutorial['id_tutorial'] ?>' >Excluir</a>
                    
                 </div>
                 </div>
