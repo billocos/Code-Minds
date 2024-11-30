@@ -43,7 +43,7 @@ include "../control/listarUsuariocontrol.php";
                 <td><?php echo $t["nome"] ?></td>
                 <td><?php echo $t["email"] ?></td>
                 <td><?php echo $t["telefone"] ?></td>
-                <td><?php echo $t["senha"] ?></td>
+                <td><?php echo $t["senha"] = str_repeat('*', 4); ?></td>
                 <td><?php echo $t["tipo"] ?></td>
                 <td>
                     <!-- Botão Excluir -->

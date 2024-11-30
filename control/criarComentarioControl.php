@@ -17,9 +17,9 @@
     $comentarioDTO->setIdUsuario($id_usuario);
 
     $sucesso = $comentarioDAO->salvarComentario($comentarioDTO);
-
-    if ($sucesso) {
-        header("Location: ../view/tutoriais.php?status=sucesso");
+    
+    if($sucesso){
+        header("Location: ../view/tutorialCompleto.php?id={$id_tutorial}&status=sucesso");
     }else{
         echo "erro";
     }

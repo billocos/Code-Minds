@@ -320,7 +320,7 @@ $todos = $tutorialDAO->listarTutoriaisPorProfessor($id_professor);
             Swal.fire({
                 icon: 'success',
                 title: 'Sucesso!',
-                text: 'Ação realizada com sucesso!',
+                text: 'Tutorial cadastrado com sucesso!',
                 showConfirmButton: false,
                 timer: 1500
             });

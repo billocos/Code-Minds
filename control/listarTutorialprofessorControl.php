@@ -3,10 +3,10 @@
     include_once "../model/DAO/TutorialDAO.php";
 
     $tutorialDAO = new TutorialDAO();
-    // $id_usuario = $_POST['id_usuario'];
+    $id_usuario = $_POST['id_usuario'];
     
 
-    $todos = $tutorialDAO->listarTutoriaisPorProfessor();
+    $todos = $tutorialDAO->listarTutoriaisPorProfessor($id_usuario);
     
 
     // echo "<pre>";

@@ -181,36 +181,12 @@ $tipo = $_SESSION["tipo"];
                 </div>
                 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
 
-<script>
-    // Captura o valor do parâmetro `status` na URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const status = urlParams.get('status');
 
-    // Exibe alerta SweetAlert com base no status de envio
-    if (status === 'sucesso') {
-        Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: 'Tutorial enviado com sucesso!',
-            showConfirmButton: false,
-            timer: 1500
-        });
-    } else if (status === 'erro') {
-        Swal.fire({
-            position: 'center',
-            icon: 'error',
-            title: 'Erro ao enviar tutorial!',
-            text: 'Por favor, verifique os campos e tente novamente.',
-            showConfirmButton: true
-        });
-    }
-</script>
                
 </body>
 </html>
 
-        <!-- <p>seja bem vindo <?php echo $nome;
-                            echo '  ' . $tipo ?></p> -->
+        
     </header>
 
 
