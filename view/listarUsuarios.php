@@ -39,7 +39,7 @@ include "../control/listarUsuariocontrol.php";
                 <td><?php echo $t["nome"] ?></td>
                 <td><?php echo $t["email"] ?></td>
                 <td><?php echo $t["telefone"] ?></td>
-                <td><?php echo $t["senha"] ?></td>
+                <td><?php echo $t["senha"] = str_repeat('*', 4); ?></td>
                 <td><?php echo $t["tipo"] ?></td>
                 <td>
                     <a class="btn.excluir" href="../control/excluirUsuarioControl.php?id_usuario=<?php echo $t["id_usuario"] ?>"

@@ -4,12 +4,10 @@ include_once "../model/DTO/UsuarioDTO.php";
 
 class UsuarioDAO{
     public $pdo = null;
-    public function __construct()
-    {
+    public function __construct(){
         $this->pdo = Conexao::getInstance();
     }
-    public function salvarUsuario(UsuarioDTO $usuarioDTO)
-    {
+    public function salvarUsuario(UsuarioDTO $usuarioDTO){
         try {
             //var_dump($usuarioDTO);
             $sql = "INSERT INTO usuario (nome, email, telefone ,senha ,tipo) VALUES (? ,? ,? , ? ,?)";
