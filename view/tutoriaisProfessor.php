@@ -296,8 +296,8 @@ $todos = $tutorialDAO->listarTutoriaisPorProfessor($id_professor);
 
                     <a class='tutorial-link' href='tutorialCompleto.php?id=<?php echo $tutorial['id_tutorial'] ?>'>Ver Tutorial</a>
                     
-                        <a class='tutorial-link2' href=' alterarTutorialProf.php?id=<?php echo $tutorial['id_tutorial'] ?>'>Alterar</a>
-                    <a class='tutorial-link3' href='../control/excluirTutorialControlProf.php?id=<?php echo $tutorial['id_tutorial'] ?>' >Excluir</a>
+                        <a class='tutorial-link3' href=' alterarTutorial.php?id=<?php echo $tutorial['id_tutorial'] ?>'>Alterar</a>
+                    <a class='tutorial-link2' href='../control/excluirTutorialControlProf.php?id=<?php echo $tutorial['id_tutorial'] ?>' >Excluir</a>
                    
                 </div>
                 </div>
