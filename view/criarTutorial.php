@@ -22,7 +22,6 @@ $tipo = $_SESSION["tipo"];
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css">
 </head>
 <body>
-    <h1>Seja bem-vindo ao painel de criação, feito para desenvolver seus tutoriais!</h1>
     <div class="form-container">
         <h2>ADICIONAR TUTORIAL</h2>
         <form action="../control/criarTutorialControl.php" method="post">

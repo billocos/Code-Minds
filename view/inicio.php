@@ -174,8 +174,9 @@ $tipo = $_SESSION["tipo"];
                     <div class="welcome-message">
                         <h1 class="princ">Bem-vindo, <span>Professor</span>!</h1>
                         <p>Que bom que você chegou!<br> Pronto para mais um de seus tutoriais inovadores?</p>
-                        <form action="./criarTutorial.php"><input type="submit" class="button" value="Começar"></form>
-                        <a class='tutorial-link' href='tutoriaisProfessor.php?id=<?php echo $id ?>'>Ver Tutoriais</a>
+                        <form action="./criarTutorial.php"><input type="submit" class="button" value="Criar"></form>
+                        
+                        <input type="submit" class="button" value="Ver Tutoriais" onclick="window.location.href='tutoriaisProfessor.php?id=<?php echo $id ?>'">
 
                     </div>
                 </div>

@@ -2,9 +2,7 @@
 <html>
 <head>
 	<title>Página Login</title>
-	<link rel="stylesheet" type="text/css" href="../styles/log.css">
-	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<link rel="stylesheet" href="../styles/log.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css">
 </head>
@@ -21,8 +19,8 @@
 						<i class="fas fa-user"></i>
 					</div>
 					<div class="div">
+						<input type="email" name="email" class="input" placeholder=" " required>
 						<h5>E-mail</h5>
-						<input type="email" name="email" class="input" required>
 					</div>
 				</div>
 				<div class="input-div pass">
@@ -30,8 +28,8 @@
 						<i class="fas fa-lock"></i>
 					</div>
 					<div class="div">
+						<input type="password" name="senha" class="input" placeholder=" " required>
 						<h5>Senha</h5>
-						<input type="password" name="senha" class="input" required>
 					</div>
 				</div>
 				<a href="#">Esqueceu sua senha?</a>
