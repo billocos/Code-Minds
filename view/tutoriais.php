@@ -301,8 +301,8 @@ $tipo = $_SESSION["tipo"];
 
                     <a class='tutorial-link' href='tutorialCompleto.php?id=<?php echo $tutorial['id_tutorial'] ?>'>Ver Tutorial</a>
                     <?php if ($tipo == 'administrador') { ?>
-                        <a class='tutorial-link2' href=' alterarTutorial.php?id=<?php echo $tutorial['id_tutorial'] ?>'>Alterar</a>
-                    <a class='tutorial-link3' href='../control/excluirTutorialControl.php?id=<?php echo $tutorial['id_tutorial'] ?>' >Excluir</a>
+                        <!-- <a class='tutorial-link2' href=' alterarTutorial.php?id=<?php //echo $tutorial['id_tutorial'] ?>'></a> -->
+                    <a class='tutorial-link2' href='../control/excluirTutorialControl.php?id=<?php echo $tutorial['id_tutorial'] ?>' >Excluir</a>
                     <?php } ?> 
                 </div>
                 </div>

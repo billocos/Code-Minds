@@ -2,6 +2,8 @@
 require_once "../model/DAO/TutorialDAO.php";
 require_once "../model/DTO/TutorialDTO.php";
  $id_tutorial = $_GET["id"];
+ session_start();
+$id = $_SESSION['id_usuario'];
 //   var_dump($id_usuario);
 
 $tutorialDAO = new TutorialDAO();
@@ -33,8 +35,8 @@ $retorno = $tutorialDAO->buscarTutorialPorID($id_tutorial);
             <textarea name="descricao" id="descricao" ><?php echo $retorno['descricao']; ?></textarea>
 
             <label for="tutorial">Conteúdo do Tutorial:</label>
-            <textarea cols="10" rows="5" id="" name="tutorial"required></textarea required>
-
+            <textarea cols="10" rows="5" id="" name="tutorial"required><?php echo $retorno['conteudo']; ?></textarea required>
+            <input type="hidden" name="id_usuario" value="<?php echo $id; ?>">
             <button class="btn" type="submit">Salvar Alterações</button>
         </form>
     </div>
